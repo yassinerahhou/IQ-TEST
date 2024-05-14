@@ -1,0 +1,95 @@
+// .SCSS SLIDER STYLE FILE
+
+// MAIN DIV SLIDER
+.main_slider {
+  //   border: 1px solid black;
+  background-color: #34495e;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+// DIV for the left side with
+.left_slider {
+  //   border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+// HEADLINE STYLE START WITH "Unveil your"
+.box_intro_headline {
+  //   border: 1px solid black;
+  color: white;
+  padding: 20px;
+}
+
+// <p> style for how many ppl take the test
+.box_intro_takingtest {
+  //   border: 1px solid black;
+  color: white;
+  padding: 20px;
+}
+
+// P FOR PARA TEST
+.p_random_test {
+  //   border: 1px solid black;
+  display: flex;
+  margin-bottom: 0px !important;
+  align-items: center;
+  gap: 10px;
+}
+
+// BEFORE RED BTN
+.p_random_test::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(211, 55, 55);
+  animation: color_change;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+// ANIMATION FOR THIS
+@keyframes color_change {
+  0% {
+    background-color: rgb(211, 55, 55);
+  }
+  100% {
+    background-color: rgb(207, 198, 198);
+  }
+}
+
+// BUTTN FOR START TEST
+.box_intro_button {
+  //   border: 1px solid black;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// BTN START TEST STYLE
+.btn_start {
+  width: 250px;
+  //   background-color: wheat;
+}
+
+//  DIV FOR THE RIGHT SIDE WITH IMG MAYBE
+.right_slider_img {
+  //   border: 1px solid red;
+
+  .img_slider_class {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
