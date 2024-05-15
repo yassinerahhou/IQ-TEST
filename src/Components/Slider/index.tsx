@@ -2,7 +2,7 @@ import styles from "./slider.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // IMG BRAIN THINKING FOR SLIDER
-import img_brain from "../../../src/assets/slider_imgs/img_slider.png";
+import img_brain from "../../../src/assets/slider_imgs/brx.png";
 
 export default function Slider() {
   return (
