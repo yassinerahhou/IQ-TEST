@@ -44,12 +44,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <center>
-          {" "}
+        <div className="copyright_section">
           <p id="copyright">
             &copy; {new Date().getFullYear()} Your Company. All rights reserved.
           </p>
-        </center>
+        </div>
       </footer>
     </>
   );
