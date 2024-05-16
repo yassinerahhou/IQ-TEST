@@ -4,6 +4,7 @@ import Footer from "./Components/Footer/footer";
 import Slider from "./Components/Slider";
 import Feedback from "./Components/feedback-section";
 import TestPassingTips from "./Components/TestPassingTips";
+import IQTestInfo from "./Components/IQTestInfo";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Slider />
       <TestPassingTips />
+      <IQTestInfo />
       <Feedback />
       <Footer />
     </>

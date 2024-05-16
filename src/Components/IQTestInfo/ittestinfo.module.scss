@@ -1,0 +1,70 @@
+// .SCSS FILE FOR IQTestInfo Section
+.section_infotest {
+  border: 1px solid black;
+  margin: 10px;
+  background-color: #34495e;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+// Headline Section
+.headline_section {
+  //   border: 1px solid red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: white;
+  }
+}
+
+// Image && Text
+.image_text {
+  //   border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 350px;
+  gap: 20px;
+  padding: 30px;
+}
+
+// Diagram img
+.img_diagram_div {
+  //   border: 1px solid white;
+
+  .class_diagram_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}
+// Test diagram
+.text_diagram {
+  //   border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  .para_diagram {
+    color: white;
+    font-size: 22px;
+  }
+}
+
+// Button Start Test
+.btn_start_test {
+  //   border: 1px solid red;
+  padding: 10px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
