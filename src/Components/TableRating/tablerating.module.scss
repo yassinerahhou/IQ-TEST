@@ -1,0 +1,92 @@
+// .SCSS FFILE FOR TABLE RATING BASED ON POINTS TEST
+.table_rating {
+  //   border: 1px solid red;
+  background-color: #34495e;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  gap: 5px;
+}
+
+// HEADLINE POWER RATING
+.headline_powerrating {
+  background-color: #34495e;
+  //   border: 1px solid red;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  h1 {
+    color: white;
+  }
+  .img_icon_class {
+    width: 5%;
+    // border: 1px solid red;
+  }
+}
+
+// RIGHT TABLE COLUMNS
+.right_table {
+  //   border: 2px solid red;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  gap: 10px;
+  padding: 10px;
+}
+
+// BOXSS
+.table_box_right {
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// POINTS <P>
+
+.span_points {
+  background-color: #00a29d;
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+// TITLE ,P>
+.span_title {
+  font-size: 20px;
+}
+
+// LEFT TABLE COLUMNS
+.left_table {
+  //   border: 2px solid red;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  gap: 10px;
+  padding: 10px;
+}
+
+// BOXSS RIGHT
+.table_box_left {
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}

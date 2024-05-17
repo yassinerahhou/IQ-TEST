@@ -35,7 +35,9 @@ export default function IQTestInfo() {
           </div>
         </div>
         <div className={styles.btn_start_test}>
-          <button className="btn btn-primary">TAKE THE TEST</button>
+          <button className={`${styles.btn_taketest} btn btn-primary`}>
+            TAKE THE TEST
+          </button>
         </div>
       </div>
     </>

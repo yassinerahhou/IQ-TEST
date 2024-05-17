@@ -5,6 +5,7 @@ import Slider from "./Components/Slider";
 import Feedback from "./Components/feedback-section";
 import TestPassingTips from "./Components/TestPassingTips";
 import IQTestInfo from "./Components/IQTestInfo";
+import TableRating from "./Components/TableRating";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Slider />
       <TestPassingTips />
       <IQTestInfo />
+      <TableRating />
       <Feedback />
       <Footer />
     </>
