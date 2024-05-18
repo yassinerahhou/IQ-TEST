@@ -1,8 +1,13 @@
 // .SCSS SLIDER STYLE FILE
 
+.main_parent {
+  background-color: #34495e;
+}
 // MAIN DIV SLIDER
 .main_slider {
   //   border: 1px solid black;
+  width: 85%;
+  margin: auto;
   background-color: #34495e;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
