@@ -8,6 +8,7 @@ import img_3 from "../../assets/passingtest_imgs/img_3.png";
 export default function TestPassingTips() {
   return (
     <>
+    <div className={styles.test_pass_parent}>
       <div className={styles.headline_section}>
         <h1 className={styles.h1_headline}>HOW TO PASS THE TEST ?</h1>
       </div>
@@ -45,6 +46,7 @@ export default function TestPassingTips() {
             </p>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
