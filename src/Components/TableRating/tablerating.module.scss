@@ -1,7 +1,15 @@
 // .SCSS FFILE FOR TABLE RATING BASED ON POINTS TEST
+
+// PARENT TABLE
+.parent_table {
+  background-color: #34495e;
+}
+
 .table_rating {
   //   border: 1px solid red;
   background-color: #34495e;
+  width: 85%;
+  margin: auto;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);

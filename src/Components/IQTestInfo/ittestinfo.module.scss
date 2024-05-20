@@ -1,8 +1,15 @@
 // .SCSS FILE FOR IQTestInfo Section
+
+// PARENT IQTESTINFO
+.iqtest_parent {
+  background-color: #34495e;
+}
+
 .section_infotest {
   // border: 1px solid black;
   // margin: 10px;
-  background-color: #34495e;
+  width: 85%;
+  margin: auto;
 
   display: grid;
   grid-template-columns: repeat(1, 1fr);

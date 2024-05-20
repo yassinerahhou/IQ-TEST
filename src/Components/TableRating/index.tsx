@@ -7,6 +7,7 @@ import img_brain from "../../assets/tablerating_imgs/image.png";
 export default function TableRating() {
   return (
     <>
+      <div className={styles.parent_table}></div>
       <div className={styles.headline_powerrating}>
         <h1>Brainpower Rating</h1>
         <img
