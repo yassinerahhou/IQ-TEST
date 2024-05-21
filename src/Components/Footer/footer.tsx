@@ -18,13 +18,19 @@ export default function Footer() {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <a href="#">NEWS</a>
+                <a className="a_remove_style" href="#">
+                  NEWS
+                </a>
               </li>
               <li>
-                <a href="#">BLOG</a>
+                <a className="a_remove_style" href="#">
+                  BLOG
+                </a>
               </li>
               <li>
-                <a href="#">IQ</a>
+                <a className="a_remove_style" href="#">
+                  IQ
+                </a>
               </li>
             </ul>
           </div>
@@ -32,13 +38,19 @@ export default function Footer() {
             <h3>Legal Pages</h3>
             <ul>
               <li>
-                <a href="#">Terms & Conditions</a>
+                <a className="a_remove_style" href="#">
+                  Terms & Conditions
+                </a>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+                <a className="a_remove_style" href="#">
+                  Privacy Policy
+                </a>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <a className="a_remove_style" href="#">
+                  Contact Us
+                </a>
               </li>
             </ul>
           </div>

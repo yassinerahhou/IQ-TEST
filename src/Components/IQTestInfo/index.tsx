@@ -26,13 +26,7 @@ export default function IQTestInfo() {
                 cognitive abilities, you gain not only a better understanding of
                 yourself but also invaluable insights into how you interact with
                 the world around you. Imagine being able to pinpoint your
-                natural aptitudes with precision. Whether it's a knack for
-                logical reasoning, an eye for detail, or a talent for creative
-                thinking, recognizing these strengths empowers you to leverage
-                them in all aspects of your life. From academic pursuits to
-                professional endeavors and even personal relationships,
-                harnessing your cognitive strengths can lead to unparalleled
-                success and fulfillment.
+                natural aptitudes with precision.
               </p>
             </div>
           </div>
