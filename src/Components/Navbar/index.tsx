@@ -10,9 +10,18 @@ export default function Navbar() {
           </div>
           <div className={styles.elements_nav}>
             <ul className={styles.ul_nav}>
-              <li className={styles.li_nav}>START</li>
-              <li className={styles.li_nav}>PRICES</li>
-              <li className={styles.li_nav}>LANGUAGES</li>
+              <li className={styles.li_nav}>
+                <i className="fa fa-hourglass-start"></i> START
+              </li>
+              <li className={styles.li_nav}>
+                <i className="fa fa-money"></i> PRICES
+              </li>
+              <li className={styles.li_nav}>
+                <i className="fa fa-language"></i> LANGUAGES
+              </li>
+              <li className={styles.li_nav}>
+                <i className="fa fa-comment"></i> FEEDBACK
+              </li>
             </ul>
           </div>
           {/* ACCESS DIV */}

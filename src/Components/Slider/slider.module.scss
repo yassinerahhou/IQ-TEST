@@ -37,7 +37,7 @@
 .box_intro_takingtest {
   //   border: 1px solid black;
   color: white;
-  padding: 20px;
+  // padding: 20px;
 }
 
 // P FOR PARA TEST
@@ -45,6 +45,8 @@
   //   border: 1px solid black;
   display: flex;
   margin-bottom: 0px !important;
+  font-size: 19px;
+  font-weight: 200;
   align-items: center;
   gap: 10px;
 }
@@ -58,8 +60,8 @@
   border-radius: 50%;
   background-color: rgb(211, 55, 55);
   animation: color_change;
-  animation-duration: 1.2s;
-  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
   animation-iteration-count: infinite;
 }
 

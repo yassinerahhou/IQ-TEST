@@ -20,6 +20,9 @@
 // Headline Section
 .headline_section {
   //   border: 1px solid red;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
@@ -27,6 +30,8 @@
 
   h1 {
     color: white;
+    color: #34495e;
+    font-weight: 700;
   }
 }
 

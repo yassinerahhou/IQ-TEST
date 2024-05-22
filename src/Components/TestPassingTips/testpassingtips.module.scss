@@ -22,7 +22,7 @@
 // HEADLINE SECTION STYLE "headline_section
 .headline_section {
   background-color: #34495e;
-  margin-top: 15px;
+  // margin-top: 15px;
   //   border: 1px solid black;
   //   margin: 10px;
 
@@ -31,9 +31,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
 
   .h1_headline {
-    color: white;
+    color: #34495e;
+    font-weight: 700;
     letter-spacing: 3px;
   }
 }
