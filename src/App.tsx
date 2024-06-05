@@ -6,17 +6,12 @@ import Feedback from "./Components/feedback-section";
 import TestPassingTips from "./Components/TestPassingTips";
 import IQTestInfo from "./Components/IQTestInfo";
 import TableRating from "./Components/TableRating";
+import Layout from "./Components/Routes";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Slider />
-      <TestPassingTips />
-      <IQTestInfo />
-      <TableRating />
-      <Feedback />
-      <Footer />
+      <Layout />
     </>
   );
 }

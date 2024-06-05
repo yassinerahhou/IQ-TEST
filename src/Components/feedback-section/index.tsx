@@ -1,5 +1,5 @@
 import "./feedback-style.css";
-export default function feedback() {
+export default function Feedback() {
   return (
     <>
       <div className="parent_feedback">

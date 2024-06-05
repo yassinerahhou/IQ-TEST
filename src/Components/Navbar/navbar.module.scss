@@ -85,6 +85,12 @@
   padding: 10px;
 }
 
+// REMOVE DEFAULT
+.remove_dec {
+  text-decoration: none;
+  color: white;
+}
+
 // BREAK POINTS
 @media only screen and (max-width: 1200px) {
   .sub_nav {
