@@ -1,0 +1,147 @@
+// .SCSS FILE FOR PRICES
+.prices_card {
+  // border: 1px solid red;
+
+  display: grid;
+  margin: auto;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 10px;
+}
+
+// LEFT CARD
+.card_left {
+  border: 1px solid grey;
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 10px;
+  height: 450px;
+  width: 45%;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+  padding: 5px;
+}
+
+// PRICE HEADLINE BOX
+.price_box_headline {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: grey;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+// BOX ORIGINAL PRICE
+.box_original_test {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .para_original_price {
+    font-weight: 700;
+    font-size: 26px;
+
+    .underline_price {
+      text-decoration: line-through;
+      color: green;
+    }
+  }
+}
+
+// SOLGAN BOX FOR PRICE
+.box_solgan_price {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .solgan_p {
+    font-size: 20px;
+  }
+}
+
+.box_btn_price {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// PRICE HEADLINE
+.each_box_headline {
+  border: 1px solid red;
+}
+
+.btn_start {
+  background-color: royalblue;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  width: 150px;
+}
+
+// RIGHT CARD
+.right_left {
+  border: 1px solid red;
+  border-radius: 10px;
+  height: 450px;
+  width: 45%;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+// Headline Iq test
+.headline_iq_price_test {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .iqtest_price_p {
+    color: black;
+  }
+}
+
+.ul_prices_features {
+  padding: 10px;
+}
+
+.li_features {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.li_features::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/src/assets/prices_imgs/icon-check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// features_our_test
+.features_our_test {
+  border: 1px solid red;
+}
