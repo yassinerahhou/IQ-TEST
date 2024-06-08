@@ -1,9 +1,10 @@
 import styles from "./prices.module.scss";
+import "./Pricing.css";
 
 export default function Prices() {
   return (
     <>
-      <div>PRICES</div>
+      {/* <div>PRICES</div>
       <div className={styles.prices_card}>
         <div className={styles.card_left}>
           <div className={styles.price_box_headline}>
@@ -47,7 +48,71 @@ export default function Prices() {
             </ul>
           </div>
         </div>
+      </div> */}
+      <br />
+
+      <div className="parent-div-1">
+        <div className="card-starter">
+          <div className="pack-name">
+            <h2>STARTER</h2>
+            <h1>0.99$</h1>
+            <p> One day</p>
+          </div>
+          <div className="pack-details">
+            <div className="text-structure">
+              <p>Basic IQ test with limited questions</p>
+              <hr />
+              <p>Basic result overview</p>
+              <hr />
+              <p>Ad-supported experience</p>
+              <hr />
+            </div>
+            <button>SELECT PLAN</button>
+          </div>
+        </div>
+        <div className="card-advanced">
+          <div className="pack-name">
+            <h2>ADVANCED</h2>
+            <h1>9.99$</h1>
+            <p> per month</p>
+          </div>
+          <div className="pack-details">
+            <div className="text-structure">
+              <p>Full access to all IQ test questions</p>
+              <hr />
+              <p>Detailed result analysis</p>
+              <hr />
+              <p>Download in PDF</p>
+              <hr />
+              <p>Ad-free experience</p>
+              <hr />
+            </div>
+            <button>SELECT PLAN</button>
+          </div>
+        </div>
+        <div className="card-premium">
+          <div className="pack-name">
+            <h2>PREMIUM</h2>
+            <h1>59.99$</h1>
+            <p> per month</p>
+          </div>
+          <div className="pack-details">
+            <div className="text-structure">
+              <p>All features of Advanced</p>
+              <hr />
+              <p>Personalized cognitive improvement tips</p>
+              <hr />
+              <p>Store your Tests in your personal account</p>
+              <hr />
+              <p>Historical test results and progress tracking</p>
+              <hr />
+            </div>
+            <button>SELECT PLAN</button>
+          </div>
+        </div>
       </div>
+
+      <br />
     </>
   );
 }

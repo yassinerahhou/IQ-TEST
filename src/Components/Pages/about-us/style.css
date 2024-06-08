@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.about-us-secrion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f5f6;
+  width: 100%;
+  padding: 20px;
+}
+
+#img-sect {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#img-sect img {
+  max-width: 100%;
+  height: auto;
+}
+
+#about-us-txt {
+  max-width: 90%;
+  text-align: left;
+  padding: 20px;
+}
+
+#about-us-main-content {
+  max-width: 90%;
+  text-align: left;
+  padding: 20px;
+}
+
+#about-us-txt h1,
+#about-us-txt h2,
+#about-us-txt h3,
+#about-us-txt p,
+#about-us-main-content h1,
+#about-us-main-content h2,
+#about-us-main-content h3,
+#about-us-main-content p {
+  margin: 10px 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .about-us-secrion {
+    text-align: center;
+  }
+
+  #about-us-txt,
+  #about-us-main-content {
+    max-width: 100%;
+  }
+
+  #about-us-txt ul,
+  #about-us-main-content ul {
+    padding-left: 0;
+  }
+}
+.about-us-secrion h1,
+.about-us-secrion h3 {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}

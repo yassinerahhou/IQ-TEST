@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./footer-style.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 export default function Footer() {
@@ -51,6 +52,11 @@ export default function Footer() {
                 <a className="a_remove_style" href="#">
                   Contact Us
                 </a>
+              </li>
+              <li>
+                <Link to="/ABOUT">
+                  <span className="a_remove_style">ABOUT US</span>
+                </Link>
               </li>
             </ul>
           </div>
