@@ -1,0 +1,77 @@
+// .SCSS FILE FOR STAR QUIZ CARD
+.card_ready {
+  height: 500px;
+  border: 2px solid red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// KEEP FOLLOWING CARD
+.card_kee_mind {
+  width: 500px;
+  height: 400px;
+  //   border: 2px solid grey;
+  box-shadow: 2px 2px 20px gray;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+// HEADLINE BOX
+.box_ready_headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+// BOX UL
+.box_ready_ul {
+  padding: 10px;
+  font-weight: 300;
+  font-size: 17px;
+
+  .ul_following {
+    list-style-type: circle;
+  }
+}
+
+// BOXSS READY TO START
+.box_ready_start {
+}
+
+// BOX FOR BTNS
+.box_ready_btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .canacel_btn {
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border: none;
+    font-weight: 700;
+  }
+}
+
+.start_btn {
+  width: 150px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: rgb(0 162 157);
+  color: white;
+  border: none;
+  font-weight: 700;
+}

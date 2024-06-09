@@ -91,6 +91,19 @@
   color: white;
 }
 
+// STYLE FOR SELECT ITEM
+.selected_item {
+  color: #92e3a9;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: white;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
 // BREAK POINTS
 @media only screen and (max-width: 1200px) {
   .sub_nav {

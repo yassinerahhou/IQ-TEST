@@ -1,7 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./navbar.module.scss";
 
 export default function Navbar() {
+  // PATH NAME TO SELECT ELEMENTS ABOVE
+
+  const location = useLocation().pathname;
+
   return (
     <>
       <header className={styles.main_header}>
@@ -14,22 +18,53 @@ export default function Navbar() {
           <div className={styles.elements_nav}>
             <ul className={styles.ul_nav}>
               <li className={styles.li_nav}>
-                <Link className={styles.remove_dec} to="/Start">
-                  <i className="fa fa-hourglass-start"></i> Start
+                <Link
+                  className={
+                    location === "/Start"
+                      ? `${styles.selected_item}`
+                      : styles.remove_dec
+                  }
+                  to="/Start"
+                >
+                  Start
                 </Link>
               </li>
               <li className={styles.li_nav}>
-                <Link className={styles.remove_dec} to="/Prices">
+                <Link
+                  className={
+                    location === "/Prices"
+                      ? `${styles.selected_item}`
+                      : styles.remove_dec
+                  }
+                  to="/Start"
+                  to="/Prices"
+                >
                   <i className="fa fa-money"></i> PRICES
                 </Link>
               </li>
               <li className={styles.li_nav}>
-                <Link className={styles.remove_dec} to="/Blog">
+                <Link
+                  className={
+                    location === "/Blog"
+                      ? `${styles.selected_item}`
+                      : styles.remove_dec
+                  }
+                  to="/Start"
+                  to="/Blog"
+                >
                   <i className="fa fa-language"></i> BLOG
                 </Link>
               </li>
               <li className={styles.li_nav}>
-                <Link className={styles.remove_dec} to="Faq">
+                <Link
+                  className={
+                    location === "/Faq"
+                      ? `${styles.selected_item}`
+                      : styles.remove_dec
+                  }
+                  to="/Start"
+                  to="Faq"
+                >
                   <i className="fa fa-comment"></i> FAQ
                 </Link>
               </li>
