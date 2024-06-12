@@ -1,0 +1,163 @@
+// .SCSS FILE FOR QUIZ TEST
+.main_quiz_container {
+  border: 1px solid red;
+  margin: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: 20px;
+}
+
+// SUB QUIZ CONTAINER
+.sub_quiz {
+  border: 1px solid red;
+  width: 70%;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+// BOX FOR TIMER
+.boxIq_timer {
+  //   border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .timer_count {
+    background-color: #222831;
+    font-size: 25px;
+    border-radius: 20px;
+    padding: 5px;
+    color: white;
+  }
+}
+
+// BOX FOR PROGRESS
+.boxIq_progress {
+  //   border: 1px solid red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .progress_bar {
+    width: 80%;
+    background-color: #222831;
+    border-radius: 10px;
+    height: 5px;
+  }
+}
+
+// MAIN CARD IMAGES
+.boxIq_iqtestBoxs {
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 300px;
+  gap: 10px;
+  padding: 10px;
+}
+
+// RIGHT BOX HAVE MAIN IMAGE MEAN THE ONE WILL LOOKING FOR
+// I MEAN NEED JUST OE PECE FUCK ..
+
+.main_images {
+  border: 1px solid red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// Missing_images
+.missing_images {
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+// BOX FOR CURRENT QUESTION
+.boxIq_current_question {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+// BOX CARD
+.box_card {
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// NUMBERD CARD I MEAN JUST LIKE 1,2,3,4
+.numberd_card {
+  position: absolute;
+  background-color: #222831;
+  color: white;
+  width: 20px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+}
+
+// DON BOX CARD HAVE BTN FINIHS
+.boxIq_done {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+
+  .btn_done {
+    width: 150px;
+    height: 35px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(to right, #3e5d7c, #6fa3c1);
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+// CURRENT QUESTION INEX
+.current_qustion_index {
+  padding: 10px;
+
+  .para_questions {
+    background-color: #222831;
+    width: 100px;
+    text-align: center;
+    font-size: 19px;
+    border-radius: 10px;
+    color: white;
+  }
+}
+
+// BOX QUIZ RACE
+.boxIq {
+  border: 1px solid black;
+}

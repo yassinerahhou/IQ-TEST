@@ -1,14 +1,17 @@
 // .SCSS SLIDER STYLE FILE
 
 .main_parent {
-  background-color: #34495e;
+  // background-color: #34495e;
+  background: linear-gradient(to right, #3e5d7c, #6fa3c1);
 }
 // MAIN DIV SLIDER
 .main_slider {
   //   border: 1px solid black;
   width: 85%;
   margin: auto;
-  background-color: #34495e;
+  // background-color: #34495e;
+  // background: linear-gradient(to right, #3e5d7c, #6fa3c1);
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 300px;

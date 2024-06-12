@@ -2,11 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap");
 
 .parent_feedback {
-  background-color: #34495e;
+  /* background-color: #34495e; */
+  background: linear-gradient(to right, #3e5d7c, #6fa3c1);
 }
 
 .feedback-section-parent {
-  background-color: #34495e;
+  /* background-color: #34495e; */
   /* border: 1px solid red; */
   border-radius: 10px;
   width: 85%;

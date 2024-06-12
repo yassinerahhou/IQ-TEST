@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./start.module.scss";
 
 export default function Start() {
@@ -19,7 +20,9 @@ export default function Start() {
           </div>
           <div className={styles.box_ready_btns}>
             <button className={styles.canacel_btn}>Canacel</button>
-            <button className={styles.start_btn}>Start test</button>
+            <Link to="/QuizTest">
+              <button className={styles.start_btn}>Start test</button>
+            </Link>
           </div>
         </div>
       </div>

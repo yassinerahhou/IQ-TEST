@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // IMG BRAIN THINKING FOR SLIDER
 import img_brain from "../../../src/assets/slider_imgs/brx.png";
+import { Link } from "react-router-dom";
 
 export default function Slider() {
   return (
@@ -19,9 +20,11 @@ export default function Slider() {
               </p>
             </div>
             <div className={styles.box_intro_button}>
-              <button className={`${styles.btn_start} btn btn-light`}>
-                Start certiificate test{" "}
-              </button>
+              <Link to="/Start">
+                <button className={`${styles.btn_start} btn btn-light`}>
+                  Start certiificate test{" "}
+                </button>
+              </Link>
             </div>
           </div>
           <div className={styles.right_slider_img}>
