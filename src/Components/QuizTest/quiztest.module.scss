@@ -1,6 +1,6 @@
 // .SCSS FILE FOR QUIZ TEST
 .main_quiz_container {
-  border: 1px solid red;
+  // border: 1px solid red;
   margin: 10px;
 
   display: flex;
@@ -12,7 +12,7 @@
 
 // SUB QUIZ CONTAINER
 .sub_quiz {
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 70%;
 
   display: grid;
@@ -55,7 +55,8 @@
 
 // MAIN CARD IMAGES
 .boxIq_iqtestBoxs {
-  border: 1px solid red;
+  border: 1px solid grey;
+  border-radius: 10px;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -68,7 +69,7 @@
 // I MEAN NEED JUST OE PECE FUCK ..
 
 .main_images {
-  border: 1px solid red;
+  // border: 1px solid red;
 
   display: flex;
   align-items: center;
@@ -83,7 +84,7 @@
 
 // Missing_images
 .missing_images {
-  border: 1px solid red;
+  // border: 1px solid red;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -93,7 +94,8 @@
 
 // BOX FOR CURRENT QUESTION
 .boxIq_current_question {
-  border: 1px solid red;
+  border: 1px solid grey;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -130,7 +132,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
+  // border: 1px solid red;
 
   .btn_done {
     width: 150px;
@@ -155,9 +157,36 @@
     border-radius: 10px;
     color: white;
   }
+
+  .last_btn {
+    border-radius: 10px;
+    border: none;
+    background-color: #6fa3c1;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 5px;
+    width: 150px;
+    padding: 5px;
+  }
 }
 
 // BOX QUIZ RACE
 .boxIq {
   border: 1px solid black;
+}
+
+// BTN NEXT DIV
+.next_question_btn {
+  .btn_next {
+    border-radius: 10px;
+    border: none;
+    background-color: #6fa3c1;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 5px;
+    width: 150px;
+    padding: 5px;
+  }
 }

@@ -1,5 +1,8 @@
 // .SCSS FILE FOR THE QUIZ
 import styles from "./quiztest.module.scss";
+// IMPORT IMAGE FILE
+import quizDataJson from "../../iqData.json";
+
 // TEST IMAGES
 import main_image from ".././../assets/iqtest_images/main_Q1-01.svg";
 
@@ -9,8 +12,40 @@ import q3 from "../../assets/iqtest_images/q3.svg";
 import q4 from "../../assets/iqtest_images/q4.svg";
 import q5 from "../../assets/iqtest_images/q5.svg";
 import q6 from "../../assets/iqtest_images/q6.svg";
+import { useEffect, useState } from "react";
 
 export default function QuizTest() {
+  // STORE DATA IN STATE
+  const [quizData, setQuizData] = useState(quizDataJson);
+  // STATE TO TRACK CURRENT INDEX
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // NEXT FUNCTION FOR BTN
+  const handNextQuestion = () => {
+    setCurrentIndex((pervstate) =>
+      pervstate === quizData.length - 1 ? 0 : pervstate + 1
+    );
+  };
+
+  // PERV QUESTION FUNCTION
+  const handlhandlPerviousQuestion = () => {
+    setCurrentIndex((pervstate) =>
+      pervstate === 0 ? quizData.length - 1 : pervstate - 1
+    );
+  };
+
+  // FIRS USE EFFUCT USED FOR CHANING IMAGES AUTO AFTER
+  // 10s test
+  useEffect(() => {
+    const interVal = setInterval(() => {
+      setCurrentIndex((pervstate) =>
+        pervstate === quizData.length - 1 ? 0 : pervstate + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interVal);
+  }, [quizData]);
+
   return (
     <>
       <div className={styles.main_quiz_container}>
@@ -23,7 +58,7 @@ export default function QuizTest() {
           </div>
           <div className={styles.boxIq_iqtestBoxs}>
             <div className={styles.main_images}>
-              <img src={main_image} alt="main img" />
+              <img src={quizData[currentIndex].main_image} alt="main img" />
             </div>
             <div className={styles.missing_images}>
               <div className={styles.box_card}>
@@ -53,11 +88,26 @@ export default function QuizTest() {
             </div>
           </div>
           <div className={styles.boxIq_current_question}>
-            <div className={styles.current_qustion_index}>LAST</div>
             <div className={styles.current_qustion_index}>
-              <p className={styles.para_questions}>1/20</p>
+              <button
+                className={styles.last_btn}
+                onClick={handlhandlPerviousQuestion}
+              >
+                LAST
+              </button>
             </div>
-            <div className={styles.next_question_btn}>NEXT</div>
+            <div className={styles.current_qustion_index}>
+              <p className={styles.para_questions}>
+                <p>
+                  {currentIndex}/{quizData.length}
+                </p>
+              </p>
+            </div>
+            <div className={styles.next_question_btn}>
+              <button className={styles.btn_next} onClick={handNextQuestion}>
+                NEXT
+              </button>
+            </div>
           </div>
           <div className={styles.boxIq_done}>
             <button className={styles.btn_done}>Finish</button>

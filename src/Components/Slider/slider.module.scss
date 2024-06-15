@@ -34,6 +34,11 @@
   //   border: 1px solid black;
   color: white;
   padding: 20px;
+
+  h1 {
+    font-weight: 900;
+    letter-spacing: 3px;
+  }
 }
 
 // <p> style for how many ppl take the test
@@ -48,6 +53,7 @@
   //   border: 1px solid black;
   display: flex;
   margin-bottom: 0px !important;
+  text-decoration: underline;
   font-size: 19px;
   font-weight: 200;
   align-items: center;

@@ -26,7 +26,7 @@ export default function Navbar() {
                   }
                   to="/Start"
                 >
-                  Start
+                  <i className="fa fa-play"></i>Start
                 </Link>
               </li>
               <li className={styles.li_nav}>
