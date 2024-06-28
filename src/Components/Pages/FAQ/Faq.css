@@ -1,0 +1,35 @@
+.faq-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.faq-item h2 {
+  color: #4e6f91;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.answer {
+  display: none;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.answer.active {
+  display: block;
+}
+.faq-container {
+  width: 90%;
+  margin: auto; /* This centers the container horizontally */
+  display: flex;
+  flex-direction: column; /* Ensures children stack vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  margin-top: 20px;
+}
