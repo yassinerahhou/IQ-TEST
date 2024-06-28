@@ -68,6 +68,18 @@ export default function Navbar() {
                   <i className="fa fa-comment"></i> FAQ
                 </Link>
               </li>
+              <li className={styles.li_nav}>
+                <Link
+                  className={
+                    location === "/KIDS"
+                      ? styles.selected_item
+                      : styles.remove_dec
+                  }
+                  to="/KIDS"
+                >
+                  <i className="fa fa-child"></i> KIDS
+                </Link>
+              </li>
             </ul>
           </div>
           {/* ACCESS DIV */}
