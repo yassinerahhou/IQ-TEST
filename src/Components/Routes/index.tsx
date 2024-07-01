@@ -15,6 +15,9 @@ import Faq from "../Pages/FAQ";
 import About from "../Pages/about-us";
 import QuizTest from "../QuizTest";
 import KIDS from "../Pages/KIDS";
+import IQ_TEST_01 from "../QuizTest/iq-test-01";
+import Quiz from "../QuizTest/Quiz";
+import Results from "../QuizTest/Result";
 
 export default function Layout() {
   return (
@@ -34,8 +37,11 @@ export default function Layout() {
           <Route path="/Faq" element={<Faq />} />
           <Route path="/KIDS" element={<KIDS />} />
 
+          <Route path="/Quiz" element={<Quiz />} />
           <Route path="/ABOUT" element={<About />} />
           <Route path="/QuizTest" element={<QuizTest />} />
+          <Route path="/IQ_TEST_01" element={<IQ_TEST_01 />} />
+          <Route path="/Results" element={<Results />} />
         </Routes>
         <Footer />
       </BrowserRouter>

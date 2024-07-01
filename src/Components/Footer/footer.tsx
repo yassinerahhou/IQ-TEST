@@ -29,9 +29,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a className="a_remove_style" href="#">
-                  IQ
-                </a>
+                <Link to="/Start">
+                  <a className="a_remove_style" href="#">
+                    IQ
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>

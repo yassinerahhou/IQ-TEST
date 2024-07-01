@@ -1,3 +1,4 @@
+// Start.tsx
 import { Link } from "react-router-dom";
 import styles from "./start.module.scss";
 
@@ -19,8 +20,8 @@ export default function Start() {
             </ul>
           </div>
           <div className={styles.box_ready_btns}>
-            <button className={styles.canacel_btn}>Canacel</button>
-            <Link to="/QuizTest">
+            <button className={styles.canacel_btn}>Cancel</button>
+            <Link to="/Quiz">
               <button className={styles.start_btn}>Start test</button>
             </Link>
           </div>
