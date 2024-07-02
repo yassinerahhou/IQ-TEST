@@ -61,10 +61,19 @@ export default function QuizTest() {
               <img src={quizData[currentIndex].main_image} alt="main img" />
             </div>
             <div className={styles.missing_images}>
-              <div className={styles.box_card}>
-                <p className={styles.numberd_card}>1</p>
-                <img src={q1} alt="img q1" />
-              </div>
+              <label htmlFor="mark1">
+                <div className={styles.box_card}>
+                  <p className={styles.numberd_card}>1</p>
+                  <img src={q1} alt="img q1" />
+                  <input
+                    className="input"
+                    type="checkbox"
+                    name="mark1"
+                    id="mark1"
+                  />
+                </div>
+              </label>
+
               <div className={styles.box_card}>
                 <p className={styles.numberd_card}>2</p>
                 <img src={q2} alt="img q2" />

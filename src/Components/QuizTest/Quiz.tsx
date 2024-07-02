@@ -71,13 +71,13 @@ const Quiz: React.FC = () => {
       )}
       <div className="options-container">
         {questions[currentQuestionIndex].options.map((option, index) => (
-          <button
+          <div
             key={index}
-            className="option-button"
+            className="optionCard"
             onClick={() => handleAnswer(option.isCorrect)}
           >
-            {option.text}
-          </button>
+            <img src={q1} alt="" />
+          </div>
         ))}
       </div>
       <div className="navigation-buttons">

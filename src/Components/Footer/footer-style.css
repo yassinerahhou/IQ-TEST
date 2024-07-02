@@ -20,14 +20,14 @@ footer {
 }
 #social-media {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   /* margin-left: 10px; */
   padding-top: 30%;
 }
 
 /* COPYRIGHT DIV */
 .copyright_section {
-  border: 1px solid red;
   bottom: 0;
   display: flex;
   align-items: center;
@@ -66,4 +66,10 @@ li {
 /* ICONS SOCIAL MEDIA SIZE */
 .fab {
   font-size: 20px;
+}
+
+.iconSocial {
+  background-color: #6fa3c1;
+  padding: 10px;
+  border-radius: 10px;
 }

@@ -9,10 +9,10 @@ export default function Footer() {
           <div className="logo">
             <h1>IQ TEST</h1>
             <span id="social-media">
-              <i className="fab fa-facebook-f"></i>
-              <i className="fab fa-twitter"></i>
-              <i className="fab fa-instagram"></i>
-              <i className="fab fa-linkedin-in "></i>
+              <i className="iconSocial fab fa-facebook-f"></i>
+              <i className="iconSocial fab fa-twitter"></i>
+              <i className="iconSocial fab fa-instagram"></i>
+              <i className="iconSocial fab fa-linkedin-in "></i>
             </span>
           </div>
           <div className="quick_links">
