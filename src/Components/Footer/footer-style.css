@@ -73,3 +73,13 @@ li {
   padding: 10px;
   border-radius: 10px;
 }
+
+/* MEDIA QUERY FOR [SMALL SCREENS] */
+@media (max-width: 480px) {
+  .parrent-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}

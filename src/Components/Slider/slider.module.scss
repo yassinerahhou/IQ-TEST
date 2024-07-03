@@ -110,3 +110,75 @@
     object-fit: contain;
   }
 }
+
+// MEDIA QUERY [SMALL DEVICES]
+@media (max-width: 480px) {
+  .main_parent {
+    width: 100%;
+  }
+
+  .main_slider {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .box_intro_headline {
+    text-align: center;
+  }
+
+  .box_intro_takingtest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .p_random_test {
+    font-size: 14px;
+  }
+}
+
+// BREAK POINT FOR SMALL DEV [TABLETS]
+@media (min-width: 481px) and (max-width: 768px) {
+  main_parent {
+    width: 100%;
+  }
+
+  .main_slider {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .box_intro_headline {
+    text-align: center;
+  }
+
+  .box_intro_takingtest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .p_random_test {
+    font-size: 18px;
+  }
+}
+
+// MEDIA QUERY BREAKPOINT FOR MED SCREENS TABLETS/AND SMALL LAPTOPS
+@media (min-width: 769px) and (max-width: 992px) {
+  .main_slider {
+    height: 400px;
+  }
+}
+
+// SECOND BREAK TO FIX SLIDER NOT WORK NEED TO BE FIXED LATER
+@media screen and (min-width: 992px) and (max-width: 1000px) {
+  .main_slider {
+    height: 400px;
+  }
+}

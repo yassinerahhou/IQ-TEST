@@ -17,7 +17,7 @@
   grid-template-columns: repeat(3, 1fr);
   // grid-template-rows: 300px;
   padding: 20px;
-  gap: 5px;
+  gap: 10px;
 }
 
 // HEADLINE SECTION STYLE "headline_section
@@ -47,7 +47,7 @@
 
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 65% 35%;
+  // grid-template-rows: 65% 35%;
   gap: 5px;
   padding: 10px;
 }
@@ -72,4 +72,36 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
+}
+
+// MEDIA QUERY FOR [SMALL SCREENS DEVICES]
+@media (max-width: 480px) {
+  .headline_section {
+    text-align: center;
+    .h1_headline {
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+
+  .passing_test_card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// MEDIA QUERY FOR SMALL SCREENS [TABLETS]
+@media (min-width: 481px) and (max-width: 768px) {
+  .headline_section {
+    text-align: center;
+    .h1_headline {
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+
+  .passing_test_card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

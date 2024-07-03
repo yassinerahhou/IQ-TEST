@@ -103,3 +103,23 @@
   flex-direction: column;
   justify-content: center;
 }
+
+// MEDIA QUERY FOR SMALL SCREENS MOBILE
+@media (max-width: 480px) {
+  .table_rating {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+// MEDIA QUERY FOR SMALL SC [TABLETS]
+@media (min-width: 481px) and (max-width: 768px) {
+  .table_rating {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
