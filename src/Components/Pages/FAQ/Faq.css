@@ -32,4 +32,16 @@
   justify-content: center; /* Centers content vertically */
   align-items: center; /* Centers content horizontally */
   margin-top: 20px;
+  gap: 10px;
+}
+
+/* MEDIA QUERY FOR SMALL SCREENS */
+@media (max-width: 480px) {
+  /* .faq-item h2 {
+    font-size: 22px;
+  } */
+
+  .faq-container {
+    font-size: 18px;
+  }
 }

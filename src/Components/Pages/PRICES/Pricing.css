@@ -3,7 +3,7 @@
 
 .parent-div-1 {
   width: 70%;
-  height: 600px;
+  /* height: 600px; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -143,4 +143,8 @@
 .card-premium,
 .card-starter {
   border-bottom: solid 18px #4e6f91;
+}
+
+/* // MEDIA QUERY [SMALL DEVICES] */
+@media (max-width: 480px) {
 }
