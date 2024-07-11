@@ -1,33 +1,48 @@
 // Results.tsx
-
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import "./result.css";
 
 const Results: React.FC = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const score = Number(searchParams.get("score"));
-  const total = Number(searchParams.get("total"));
+  const score = parseInt(searchParams.get("score") || "0", 10);
+  const total = parseInt(searchParams.get("total") || "0", 10);
 
   const percentage = Math.round((score / total) * 100);
 
-  let resultMessage = "";
-  if (percentage >= 70) {
-    resultMessage = "Congratulations! You did great!";
-  } else if (percentage >= 50) {
-    resultMessage = "Not bad! Keep practicing!";
-  } else {
-    resultMessage = "Keep working on it! You can improve!";
-  }
-
   return (
     <div className="results-container">
-      <h2>Quiz Results</h2>
+      <h2>Your IQ Test Results</h2>
+      <div className="score-display">
+        <div className="score-circle">
+          <span className="score-number">{percentage}</span>
+          <span className="score-percent">%</span>
+        </div>
+      </div>
       <p>
-        You scored {score} out of {total} ({percentage}%)
+        You scored {score} out of {total} questions correctly.
       </p>
-      <p>{resultMessage}</p>
-      {/* Add more personalized feedback or actions based on score */}
+      <div className="result-message">
+        {percentage >= 80 ? (
+          <p>Excellent! You have a high level of logical thinking skills.</p>
+        ) : percentage >= 60 ? (
+          <p>Good job! You have above-average logical thinking skills.</p>
+        ) : percentage >= 40 ? (
+          <p>
+            Not bad! You have average logical thinking skills with room for
+            improvement.
+          </p>
+        ) : (
+          <p>
+            Keep practicing! You can enhance your logical thinking skills with
+            more exercises.
+          </p>
+        )}
+      </div>
+      <Link to="/" className="home-button">
+        Back to Home
+      </Link>
     </div>
   );
 };
