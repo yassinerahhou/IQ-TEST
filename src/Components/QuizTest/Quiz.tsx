@@ -7,7 +7,20 @@ import "./quiz.css";
 import q1 from "../../assets/iqtest_images/q1.svg";
 // Import other images as needed
 
-const questions = [
+interface Option {
+  text: string;
+  image?: string;
+  isCorrect: boolean;
+}
+
+interface Question {
+  type: "text" | "image";
+  question: string;
+  questionImage?: string;
+  options: Option[];
+}
+
+const questions: Question[] = [
   {
     type: "text",
     question:
@@ -21,13 +34,14 @@ const questions = [
   },
   {
     type: "image",
-    questionImage: q1,
     question: "Which figure completes the pattern?",
+    questionImage: q1,
+    // change q1 to real suggestions
     options: [
-      { text: "A", isCorrect: false },
-      { text: "B", isCorrect: false },
-      { text: "C", isCorrect: true },
-      { text: "D", isCorrect: false },
+      { text: "A", image: q1, isCorrect: false },
+      { text: "B", image: q1, isCorrect: false },
+      { text: "C", image: q1, isCorrect: true },
+      { text: "D", image: q1, isCorrect: false },
     ],
   },
   {
@@ -108,6 +122,8 @@ const Quiz: React.FC = () => {
       .padStart(2, "0")}`;
   };
 
+  const currentQuestion = questions[currentQuestionIndex];
+
   return (
     <div className="quiz-container">
       <div className="quiz-header">
@@ -117,25 +133,17 @@ const Quiz: React.FC = () => {
         <div className="timer">Time left: {formatTime(timeLeft)}</div>
       </div>
       <div className="question-container">
-        {questions[currentQuestionIndex].type === "text" ? (
-          <p className="question-text">
-            {questions[currentQuestionIndex].question}
-          </p>
-        ) : (
-          <>
-            <img
-              src={questions[currentQuestionIndex].questionImage}
-              alt="Question"
-              className="question-image"
-            />
-            <p className="question-text">
-              {questions[currentQuestionIndex].question}
-            </p>
-          </>
+        {currentQuestion.type === "image" && currentQuestion.questionImage && (
+          <img
+            src={currentQuestion.questionImage}
+            alt="Question"
+            className="question-image"
+          />
         )}
+        <p className="question-text">{currentQuestion.question}</p>
       </div>
       <div className="options-container">
-        {questions[currentQuestionIndex].options.map((option, index) => (
+        {currentQuestion.options.map((option, index) => (
           <button
             key={index}
             className={`option-button ${
@@ -143,7 +151,14 @@ const Quiz: React.FC = () => {
             }`}
             onClick={() => handleAnswer(index)}
           >
-            {option.text}
+            {option.image && (
+              <img
+                src={option.image}
+                alt={option.text}
+                className="option-image"
+              />
+            )}
+            <span>{option.text}</span>
           </button>
         ))}
       </div>
