@@ -14,7 +14,7 @@ const Faq: React.FC = () => {
 
   return (
     <div className="faq-container">
-      <h1>Frequently Asked Questions</h1>
+      <h1 className="h1_faq">Frequently Asked Questions</h1>
       <div className="faq-item" onClick={() => handleQuestionClick(0)}>
         <h2>What is included in the Free plan?</h2>
         <p className={activeIndex === 0 ? "answer active" : "answer"}>

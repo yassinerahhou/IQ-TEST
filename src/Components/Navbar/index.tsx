@@ -1,6 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./navbar.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Navbar() {
   // PATH NAME TO SELECT ELEMENTS ABOVE
@@ -8,6 +10,12 @@ export default function Navbar() {
 
   // STATE FOR TOGGLE BTW MENU MOBILE HIDE/SHOW
   const [isMobileMenu, setIsMobileMenu] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
 
   return (
     <>
@@ -23,7 +31,7 @@ export default function Navbar() {
         <nav className={styles.sub_nav}>
           <div className={styles.logo_div}>
             <Link className={styles.remove_dec} to="/Home">
-              <h1>IQ-TEST</h1>
+              <h1 className={styles.logoApp}>IQ-TEST</h1>
             </Link>
           </div>
           <div className={styles.elements_nav}>
@@ -37,7 +45,7 @@ export default function Navbar() {
                   }
                   to="/Start"
                 >
-                  <i className="fa fa-play"></i>Start
+                  Start
                 </Link>
               </li>
               <li className={styles.li_nav}>
@@ -50,7 +58,7 @@ export default function Navbar() {
                   to="/Start"
                   to="/Prices"
                 >
-                  <i className="fa fa-money"></i> PRICES
+                  PRICES
                 </Link>
               </li>
               <li className={styles.li_nav}>
@@ -63,7 +71,7 @@ export default function Navbar() {
                   to="/Start"
                   to="/Blog"
                 >
-                  <i className="fa fa-language"></i> BLOG
+                  BLOG
                 </Link>
               </li>
               <li className={styles.li_nav}>
@@ -76,7 +84,7 @@ export default function Navbar() {
                   to="/Start"
                   to="Faq"
                 >
-                  <i className="fa fa-comment"></i> FAQ
+                  FAQ
                 </Link>
               </li>
               <li className={styles.li_nav}>
@@ -88,14 +96,14 @@ export default function Navbar() {
                   }
                   to="/KIDS"
                 >
-                  <i className="fa fa-child"></i> KIDS
+                  KIDS
                 </Link>
               </li>
             </ul>
           </div>
           {/* ACCESS DIV */}
           <div className={styles.access_div}>
-            <p className={styles.li_nav_access}>ACCESS</p>
+            <p className={styles.li_nav_access}>GET STARTED</p>
           </div>
         </nav>
       </header>
@@ -112,7 +120,7 @@ export default function Navbar() {
                 >
                   <i className={`${styles.iconBars} fa fa-bars`}></i>
                 </div>
-                <Link className={styles.remove_dec} to="/Home">
+                <Link className={styles.logoApp} to="/Home">
                   <h1>IQ-TEST</h1>
                 </Link>
               </div>

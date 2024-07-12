@@ -38,7 +38,11 @@ const questions: Question[] = [
     questionImage: q1,
     // change q1 to real suggestions
     options: [
-      { text: "A", image: q1, isCorrect: false },
+      {
+        text: "A",
+        image: "https://i.imgur.com/bMbc0wb.jpeg",
+        isCorrect: false,
+      },
       { text: "B", image: q1, isCorrect: false },
       { text: "C", image: q1, isCorrect: true },
       { text: "D", image: q1, isCorrect: false },

@@ -3,7 +3,8 @@
 // PARENT IQTESTINFO
 .iqtest_parent {
   // background-color: #34495e;
-  background: linear-gradient(to right, #3e5d7c, #6fa3c1);
+  // background: linear-gradient(to right, #3e5d7c, #6fa3c1);
+  background-color: #eaf7f9;
 }
 
 .section_infotest {
@@ -32,7 +33,7 @@
   h1 {
     color: white;
     color: #34495e;
-    font-weight: 700;
+    font-weight: 300;
   }
 }
 
@@ -67,7 +68,7 @@
   padding: 10px;
 
   .para_diagram {
-    color: white;
+    color: #191919;
     font-size: 22px;
   }
 }

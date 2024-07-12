@@ -1,7 +1,7 @@
 import styles from "./ittestinfo.module.scss";
 
 // DIAGRAM IMG
-import diagram_img from "../../assets/diagram_imgs/image.png";
+import diagram_img from "../../assets/diagram_imgs/graph_digram.png";
 
 export default function IQTestInfo() {
   return (

@@ -3,7 +3,8 @@
 // MAKE PARENT FOR SECOND COM
 .test_pass_parent {
   // background-color: #34495e;
-  background: linear-gradient(to right, #3e5d7c, #6fa3c1);
+  // background: linear-gradient(to right, #3e5d7c, #6fa3c1);
+  background-color: #eaf7f9;
 }
 
 .passing_test_card {
@@ -11,7 +12,7 @@
   // background-color: #34495e;
   margin: auto;
   width: 85%;
-  color: white;
+  color: #191919;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -42,7 +43,7 @@
 }
 // BOXXS OF SECTION
 .box_test {
-  border: 2px solid white;
+  border: 2px solid #191919;
   border-radius: 5px;
 
   display: grid;

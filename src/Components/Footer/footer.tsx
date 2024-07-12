@@ -20,18 +20,18 @@ export default function Footer() {
             <ul>
               <li>
                 <a className="a_remove_style" href="#">
-                  NEWS
+                  BLOGS
                 </a>
               </li>
               <li>
                 <a className="a_remove_style" href="#">
-                  BLOG
+                  KIDS
                 </a>
               </li>
               <li>
                 <Link to="/Start">
                   <a className="a_remove_style" href="#">
-                    IQ
+                    TEST
                   </a>
                 </Link>
               </li>

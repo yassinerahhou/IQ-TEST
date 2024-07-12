@@ -2,7 +2,7 @@
 
 .main_parent {
   // background-color: #34495e;
-  background: linear-gradient(to right, #3e5d7c, #6fa3c1);
+  background-color: #eaf7f9;
 }
 // MAIN DIV SLIDER
 .main_slider {
@@ -32,19 +32,19 @@
 // HEADLINE STYLE START WITH "Unveil your"
 .box_intro_headline {
   //   border: 1px solid black;
-  color: white;
   padding: 20px;
 
   h1 {
     font-weight: 900;
     letter-spacing: 3px;
+    color: #191919;
   }
 }
 
 // <p> style for how many ppl take the test
 .box_intro_takingtest {
   //   border: 1px solid black;+
-  color: white;
+  color: #191919;
   // padding: 20px;
 }
 
