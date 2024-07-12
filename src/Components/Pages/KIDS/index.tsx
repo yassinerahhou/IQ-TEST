@@ -132,33 +132,41 @@ export default function KIDS() {
   };
 
   return (
-    <div className="kids">
-      {!showResults ? (
-        <div className="question-section fadeIn">
-          <h2>{questions[currentQuestionIndex].question}</h2>
-          <div className="options">
-            {questions[currentQuestionIndex].options.map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleAnswerClick(option)}
-                className="option-btn"
-              >
-                {option}
-              </button>
-            ))}
+    <div className="kids-quiz-container">
+      <div className="quiz-content">
+        {!showResults ? (
+          <div className="question-section fadeIn">
+            <h2 className="question-title">
+              {questions[currentQuestionIndex].question}
+            </h2>
+            <div className="options-grid">
+              {questions[currentQuestionIndex].options.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswerClick(option)}
+                  className="option-btn"
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+            <div className="quiz-progress">
+              Question {currentQuestionIndex + 1} of {questions.length}
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className="results-section fadeIn">
-          <h2>Your Results</h2>
-          <p>
-            You scored {getScore()} out of {questions.length}
-          </p>
-          <Link to="/" className="home-link">
-            Go back to Home
-          </Link>
-        </div>
-      )}
+        ) : (
+          <div className="results-section fadeIn">
+            <h2 className="results-title">Your Results</h2>
+            <p className="results-score">
+              You scored <span className="score-highlight">{getScore()}</span>{" "}
+              out of {questions.length}
+            </p>
+            <Link to="/" className="home-link">
+              Go back to Home
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

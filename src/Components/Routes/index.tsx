@@ -18,7 +18,7 @@ import KIDS from "../Pages/KIDS";
 import IQ_TEST_01 from "../QuizTest/iq-test-01";
 import Quiz from "../QuizTest/Quiz";
 import Results from "../QuizTest/Result";
-// import LoadingTest from "../LoadingTest";
+import LoadingTest from "../LoadingTest";
 
 export default function Layout() {
   return (
@@ -45,7 +45,7 @@ export default function Layout() {
           <Route path="/Results" element={<Results />} />
 
           {/* LOADING TEST FOR 5S AND THEN START ROUTE */}
-          {/* <Route path="/loading" element={<LoadingTest />} /> */}
+          <Route path="/loading" element={<LoadingTest />} />
         </Routes>
         <Footer />
       </BrowserRouter>
