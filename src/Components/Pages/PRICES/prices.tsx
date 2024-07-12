@@ -82,7 +82,7 @@ const Pricing: React.FC = () => {
         />
       </div>
       <div className="faq">
-        <h3>Frequently Asked Questions</h3>
+        <h3>Frequently Asked Questionss</h3>
         <div className="faq-item">
           <h4>What is included in the free plan?</h4>
           <p>

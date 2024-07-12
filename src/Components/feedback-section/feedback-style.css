@@ -33,6 +33,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+.h1_headline {
+  /* color: black; */
+}
+
 .reveiw-area {
   display: flex;
   align-items: center;
