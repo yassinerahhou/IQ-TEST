@@ -1,0 +1,110 @@
+.parentDarken,
+.mainModal {
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  position: fixed;
+}
+
+.parentDarken {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.textLoading {
+  text-align: center;
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+
+.loadingCounter {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 700;
+
+  border: 5px solid transparent;
+  border-top-color: royalblue;
+  border-image: var(
+      --loading-progress,
+      conic-gradient(royalblue 0deg, transparent 0deg)
+    )
+    1;
+}
+
+.lodaingModal {
+  border: 1px solid grey;
+  background-color: white;
+
+  border-radius: 10px;
+  height: 350px;
+  width: 350px;
+
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  box-shadow: 5px 5px 5px grey;
+  animation: move_modal 1s both;
+}
+
+// KEYFRAM TO ADD MSALL ANIMATION
+@keyframes move_modal {
+  10% {
+    top: -50%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+.ul_list {
+  list-style-type: none;
+  font-size: 17px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.analytical_li,
+.visual_li,
+.time_li {
+  animation: move_li 2s forwards;
+  font-weight: 500;
+}
+
+@keyframes move_li {
+  10% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.iconChec {
+  color: green;
+  margin-right: 10px;
+}

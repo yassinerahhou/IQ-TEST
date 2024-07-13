@@ -5,6 +5,7 @@ import "./quiz.css";
 
 // Import your images here
 import q1 from "../../assets/iqtest_images/q1.svg";
+import LoadingModal from "../Modals/LoadingModal";
 // Import other images as needed
 
 interface Option {
@@ -64,6 +65,7 @@ const questions: Question[] = [
 
 const Quiz: React.FC = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<(number | null)[]>(
     new Array(questions.length).fill(null)
@@ -106,7 +108,11 @@ const Quiz: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    navigate(`/results?score=${calculateScore()}&total=${questions.length}`);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate(`/results?score=${calculateScore()}&total=${questions.length}`);
+    }, 10000);
   };
 
   const calculateScore = () => {
@@ -129,58 +135,65 @@ const Quiz: React.FC = () => {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="quiz-container">
-      <div className="quiz-header">
-        <h2>
-          Question {currentQuestionIndex + 1} of {questions.length}
-        </h2>
-        <div className="timer">Time left: {formatTime(timeLeft)}</div>
-      </div>
-      <div className="question-container">
-        {currentQuestion.type === "image" && currentQuestion.questionImage && (
-          <img
-            src={currentQuestion.questionImage}
-            alt="Question"
-            className="question-image"
-          />
-        )}
-        <p className="question-text">{currentQuestion.question}</p>
-      </div>
-      <div className="options-container">
-        {currentQuestion.options.map((option, index) => (
-          <button
-            key={index}
-            className={`option-button ${
-              userAnswers[currentQuestionIndex] === index ? "selected" : ""
-            }`}
-            onClick={() => handleAnswer(index)}
-          >
-            {option.image && (
+    <>
+      <div className="quiz-container">
+        <div className="quiz-header">
+          <h2>
+            Question {currentQuestionIndex + 1} of {questions.length}
+          </h2>
+          <div className="timer">Time left: {formatTime(timeLeft)}</div>
+        </div>
+        <div className="question-container">
+          {currentQuestion.type === "image" &&
+            currentQuestion.questionImage && (
               <img
-                src={option.image}
-                alt={option.text}
-                className="option-image"
+                src={currentQuestion.questionImage}
+                alt="Question"
+                className="question-image"
               />
             )}
-            <span>{option.text}</span>
+          <p className="question-text">{currentQuestion.question}</p>
+        </div>
+        <div className="options-container">
+          {currentQuestion.options.map((option, index) => (
+            <button
+              key={index}
+              className={`option-button ${
+                userAnswers[currentQuestionIndex] === index ? "selected" : ""
+              }`}
+              onClick={() => handleAnswer(index)}
+            >
+              {option.image && (
+                <img
+                  src={option.image}
+                  alt={option.text}
+                  className="option-image"
+                />
+              )}
+              <span>{option.text}</span>
+            </button>
+          ))}
+        </div>
+        <div className="navigation-buttons">
+          <button
+            onClick={handlePrevious}
+            disabled={currentQuestionIndex === 0}
+          >
+            Previous
           </button>
-        ))}
+          <button
+            onClick={handleNext}
+            disabled={currentQuestionIndex === questions.length - 1}
+          >
+            Next
+          </button>
+          <button onClick={handleSubmit} className="submit-button">
+            Submit
+          </button>
+        </div>
       </div>
-      <div className="navigation-buttons">
-        <button onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
-          Previous
-        </button>
-        <button
-          onClick={handleNext}
-          disabled={currentQuestionIndex === questions.length - 1}
-        >
-          Next
-        </button>
-        <button onClick={handleSubmit} className="submit-button">
-          Submit
-        </button>
-      </div>
-    </div>
+      {isLoading && <LoadingModal />}
+    </>
   );
 };
 
