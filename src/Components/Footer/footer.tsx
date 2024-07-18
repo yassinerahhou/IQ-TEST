@@ -8,13 +8,14 @@ import {
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-
+import logo from "./../../assets/logo2.png";
 export default function Footer() {
   return (
     <footer>
       <div className="parrent-div">
         <div className="logo">
-          <h1>IQ TEST</h1>
+          {/* <h1>IQ TEST</h1> */}
+          <img src={logo} alt="" />
           <div id="social-media">
             <a href="#" className="iconSocial">
               <FontAwesomeIcon icon={faFacebookF} />

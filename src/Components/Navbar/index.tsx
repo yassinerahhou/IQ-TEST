@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "./navbar.module.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import logo from "./../../assets/logi1.png";
 
 export default function Navbar() {
   const location = useLocation().pathname;
@@ -38,7 +39,8 @@ export default function Navbar() {
         <nav className={styles.sub_nav}>
           <div className={styles.logo_div}>
             <Link to="/Home" className={styles.logoLink}>
-              <h1 className={styles.logoApp}>IQ-TEST</h1>
+              {/* <h1 className={styles.logoApp}>IQ-TEST</h1> */}
+              <img src={logo} width={"auto"} alt="" />
             </Link>
           </div>
           <div className={styles.elements_nav}>
