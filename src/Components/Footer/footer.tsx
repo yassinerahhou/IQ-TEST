@@ -66,9 +66,9 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a className="a_remove_style" href="#">
+              <Link to="/contact" className="a_remove_style">
                 Contact Us
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/ABOUT" className="a_remove_style">
