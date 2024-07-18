@@ -61,9 +61,9 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a className="a_remove_style" href="#">
+              <Link to="/Privacy_policy" className="a_remove_style">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/contact" className="a_remove_style">
