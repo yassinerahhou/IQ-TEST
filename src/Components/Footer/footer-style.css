@@ -1,86 +1,121 @@
-footer {
-  /* background-color: #34495e; */
-  /* background: linear-gradient(to right, #3e5d7c, #6fa3c1); */
-  background-color: #262627;
-  color: #fff;
-  /* padding: 20px 0; */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
-  /* fix footer  */
-  /* position: fixed; */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 50px 0 20px;
+  font-family: "Poppins", sans-serif;
 }
+
 .parrent-div {
-  /* flex setting  */
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  width: 80%;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+.logo h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
 #social-media {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  /* margin-left: 10px; */
-  padding-top: 30%;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-/* COPYRIGHT DIV */
-.copyright_section {
-  bottom: 0;
+.iconSocial {
+  background-color: #333;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
-#copyright {
-  color: #fff;
-  /* border: 1px solid red; */
-  font-weight: 700;
-  font-size: 15px;
-  border: none;
-  margin-bottom: 0px !important;
-  /* margin-top: 50px; */
-  padding: 20px;
-
-  cursor: pointer;
-  font-family: "Courier New", Courier, monospace;
+.iconSocial:hover {
+  background-color: #6fa3c1;
 }
+
+.quick_links,
+.LEGAL-PAGES {
+  flex: 1;
+  max-width: 250px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 30px;
+  height: 2px;
+  background-color: #6fa3c1;
+}
+
 ul {
   list-style-type: none;
-
   padding: 0;
 }
 
 li {
-  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .a_remove_style {
-  list-style-type: none;
+  color: #bbb;
   text-decoration: none;
-  color: white;
+  transition: color 0.3s ease;
 }
 
-/* ICONS SOCIAL MEDIA SIZE */
-.fab {
-  font-size: 20px;
+.a_remove_style:hover {
+  color: #fff;
 }
 
-.iconSocial {
-  background-color: #6fa3c1;
-  padding: 10px;
-  border-radius: 10px;
+.copyright_section {
+  margin-top: 50px;
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 20px;
 }
 
-/* MEDIA QUERY FOR [SMALL SCREENS] */
-@media (max-width: 480px) {
+#copyright {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+@media (max-width: 768px) {
   .parrent-div {
-    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+    text-align: center;
   }
+
+  .quick_links,
+  .LEGAL-PAGES {
+    margin-top: 30px;
+  }
+
+  h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+h1,
+a {
+  font-family: "Poppins", sans-serif;
 }

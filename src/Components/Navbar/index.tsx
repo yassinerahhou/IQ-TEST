@@ -1,204 +1,105 @@
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./navbar.module.scss";
-import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import logo from "./../../assets/logi1.png";
 
 export default function Navbar() {
-  // PATH NAME TO SELECT ELEMENTS ABOVE
   const location = useLocation().pathname;
-
-  // STATE FOR TOGGLE BTW MENU MOBILE HIDE/SHOW
   const [isMobileMenu, setIsMobileMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
+    AOS.init({ duration: 2000 });
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => setIsMobileMenu(!isMobileMenu);
+
+  const navItems = [
+    { path: "/Start", label: "Start", icon: "fa-play" },
+    { path: "/Prices", label: "PRICES", icon: "fa-money" },
+    { path: "/Blog", label: "BLOG", icon: "fa-language" },
+    { path: "/Faq", label: "FAQ", icon: "fa-comment" },
+    { path: "/KIDS", label: "KIDS", icon: "fa-child" },
+  ];
 
   return (
     <>
-      {isMobileMenu === false && (
-        <div
-          onClick={() => setIsMobileMenu(!isMobileMenu)}
-          className={styles.menuNavIconHide}
-        >
-          <i className={`${styles.iconBarsShow} fa fa-bars`}></i>
-        </div>
-      )}
-      <header className={styles.main_header}>
+      <header
+        className={`${styles.main_header} ${isScrolled ? styles.scrolled : ""}`}
+      >
         <nav className={styles.sub_nav}>
           <div className={styles.logo_div}>
-            <Link className={styles.remove_dec} to="/Home">
-              <h1 className={styles.logoApp}>IQ-TEST</h1>
+            <Link to="/Home" className={styles.logoLink}>
+              {/* <h1 className={styles.logoApp}>IQ-TEST</h1> */}
+              <img src={logo} width={"auto"} alt="" />
             </Link>
           </div>
           <div className={styles.elements_nav}>
             <ul className={styles.ul_nav}>
-              <li className={styles.li_nav}>
-                <Link
-                  className={
-                    location === "/Start"
-                      ? `${styles.selected_item}`
-                      : styles.remove_dec
-                  }
-                  to="/Start"
-                >
-                  Start
-                </Link>
-              </li>
-              <li className={styles.li_nav}>
-                <Link
-                  className={
-                    location === "/Prices"
-                      ? `${styles.selected_item}`
-                      : styles.remove_dec
-                  }
-                  to="/Start"
-                  to="/Prices"
-                >
-                  PRICES
-                </Link>
-              </li>
-              <li className={styles.li_nav}>
-                <Link
-                  className={
-                    location === "/Blog"
-                      ? `${styles.selected_item}`
-                      : styles.remove_dec
-                  }
-                  to="/Start"
-                  to="/Blog"
-                >
-                  BLOG
-                </Link>
-              </li>
-              <li className={styles.li_nav}>
-                <Link
-                  className={
-                    location === "/Faq"
-                      ? `${styles.selected_item}`
-                      : styles.remove_dec
-                  }
-                  to="/Start"
-                  to="Faq"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li className={styles.li_nav}>
-                <Link
-                  className={
-                    location === "/KIDS"
-                      ? styles.selected_item
-                      : styles.remove_dec
-                  }
-                  to="/KIDS"
-                >
-                  KIDS
-                </Link>
-              </li>
+              {navItems.map((item) => (
+                <li key={item.path} className={styles.li_nav}>
+                  <Link
+                    to={item.path}
+                    className={
+                      location === item.path
+                        ? styles.selected_item
+                        : styles.remove_dec
+                    }
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          {/* ACCESS DIV */}
           <div className={styles.access_div}>
-            <p className={styles.li_nav_access}>GET STARTED</p>
+            <button className={styles.li_nav_access}>GET STARTED</button>
           </div>
         </nav>
       </header>
 
-      {/* MOBILE HEADER NOT GOOD PRACTICE BUT WE ARE LEARNING */}
+      {/* Mobile Menu Toggle */}
+      <div className={styles.mobile_menu_toggle} onClick={toggleMobileMenu}>
+        <i className={`fa ${isMobileMenu ? "fa-times" : "fa-bars"}`}></i>
+      </div>
+
+      {/* Mobile Menu */}
       {isMobileMenu && (
-        <>
-          <header className={styles.MobileHeader}>
-            <nav className={styles.sub_nav}>
-              <div className={styles.logo_div}>
-                <div
-                  onClick={() => setIsMobileMenu(!isMobileMenu)}
-                  className={styles.menuNavIcon}
-                >
-                  <i className={`${styles.iconBars} fa fa-bars`}></i>
-                </div>
-                <Link className={styles.logoApp} to="/Home">
-                  <h1>IQ-TEST</h1>
-                </Link>
-              </div>
-              <div className={styles.elements_nav}>
-                <ul className={styles.ul_nav}>
-                  <li className={styles.li_nav}>
-                    <Link
-                      className={
-                        location === "/Start"
-                          ? `${styles.selected_item}`
-                          : styles.remove_dec
-                      }
-                      to="/Start"
-                    >
-                      <i className="fa fa-play"></i>Start
-                    </Link>
-                  </li>
-                  <li className={styles.li_nav}>
-                    <Link
-                      className={
-                        location === "/Prices"
-                          ? `${styles.selected_item}`
-                          : styles.remove_dec
-                      }
-                      to="/Start"
-                      to="/Prices"
-                    >
-                      <i className="fa fa-money"></i> PRICES
-                    </Link>
-                  </li>
-                  <li className={styles.li_nav}>
-                    <Link
-                      className={
-                        location === "/Blog"
-                          ? `${styles.selected_item}`
-                          : styles.remove_dec
-                      }
-                      to="/Start"
-                      to="/Blog"
-                    >
-                      <i className="fa fa-language"></i> BLOG
-                    </Link>
-                  </li>
-                  <li className={styles.li_nav}>
-                    <Link
-                      className={
-                        location === "/Faq"
-                          ? `${styles.selected_item}`
-                          : styles.remove_dec
-                      }
-                      to="/Start"
-                      to="Faq"
-                    >
-                      <i className="fa fa-comment"></i> FAQ
-                    </Link>
-                  </li>
-                  <li className={styles.li_nav}>
-                    <Link
-                      className={
-                        location === "/KIDS"
-                          ? styles.selected_item
-                          : styles.remove_dec
-                      }
-                      to="/KIDS"
-                    >
-                      <i className="fa fa-child"></i> KIDS
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              {/* ACCESS DIV */}
-              <div className={styles.access_div}>
-                <p className={styles.li_nav_access}>ACCESS</p>
-              </div>
-            </nav>
-          </header>
-        </>
+        <div className={styles.mobile_menu}>
+          <nav>
+            <ul>
+              {navItems.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    className={
+                      location === item.path
+                        ? styles.selected_item
+                        : styles.remove_dec
+                    }
+                    onClick={toggleMobileMenu}
+                  >
+                    <i className={`fa ${item.icon}`}></i> {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <button className={styles.mobile_cta}>GET STARTED</button>
+        </div>
       )}
+      <br />
+      <br />
+      <br />
     </>
   );
 }

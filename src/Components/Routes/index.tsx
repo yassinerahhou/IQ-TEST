@@ -18,7 +18,8 @@ import KIDS from "../Pages/KIDS";
 import IQ_TEST_01 from "../QuizTest/iq-test-01";
 import Quiz from "../QuizTest/Quiz";
 import Results from "../QuizTest/Result";
-
+import Contact from "../Pages/contact";
+import Privacy from "../Pages/privacy-policy";
 export default function Layout() {
   return (
     <>
@@ -42,7 +43,10 @@ export default function Layout() {
           <Route path="/QuizTest" element={<QuizTest />} />
           <Route path="/IQ_TEST_01" element={<IQ_TEST_01 />} />
           <Route path="/Results" element={<Results />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/privacy_policy" element={<Privacy />} />
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </>
