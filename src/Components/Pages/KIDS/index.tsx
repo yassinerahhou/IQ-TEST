@@ -1,5 +1,5 @@
 // src/components/KIDS.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./kids.css";
 
@@ -133,6 +133,20 @@ export default function KIDS() {
 
   return (
     <div className="kids-quiz-container">
+      {/* KID BG CARD */}
+      <div className="kidsCard">
+        <div className="headlineCard">
+          <h1>IQ TEST FOR KIDS</h1>
+        </div>
+        <div className="descriptionKidsCard">
+          <p>
+            The "Kids IQ Test" offers a playful quiz with multiple-choice
+            questions tailored for children, tracking their progress and showing
+            results at the end. Kids can see their score and easily return to
+            the home page.
+          </p>
+        </div>
+      </div>
       <div className="quiz-content">
         {!showResults ? (
           <div className="question-section fadeIn">
