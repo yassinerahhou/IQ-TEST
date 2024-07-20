@@ -57,10 +57,11 @@ export default function Footer() {
           <br />
           <ul>
             <li>
-              <a className="a_remove_style" href="#">
-                Terms & Conditions
-              </a>
+              <Link to="/terms-of-use" className="a_remove_style">
+                Terms of Use
+              </Link>
             </li>
+
             <li>
               <Link to="/Privacy_policy" className="a_remove_style">
                 Privacy Policy
