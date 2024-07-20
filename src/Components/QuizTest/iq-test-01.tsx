@@ -1,5 +1,5 @@
 // Created by Yacin
-import React from "react";
+// import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./iq-test-01.css";
 import Start from "../Pages/START";

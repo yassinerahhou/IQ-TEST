@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import { useState, ChangeEvent, FormEvent } from "react";
 import "./style.css";
 
 export default function Contact() {
@@ -9,11 +8,13 @@ export default function Contact() {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission here (e.g., send data to a server)
     console.log("Form submitted:", formData);

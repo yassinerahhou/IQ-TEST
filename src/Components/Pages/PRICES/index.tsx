@@ -1,4 +1,4 @@
-import styles from "./prices.module.scss";
+// import styles from "./prices.module.scss";
 import "./Pricing.css";
 
 export default function Prices() {

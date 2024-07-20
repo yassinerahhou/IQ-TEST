@@ -4,7 +4,7 @@ import styles from "./quiztest.module.scss";
 import quizDataJson from "../../iqData.json";
 
 // TEST IMAGES
-import main_image from ".././../assets/iqtest_images/main_Q1-01.svg";
+// import main_image from ".././../assets/iqtest_images/main_Q1-01.svg";
 
 import q1 from "../../assets/iqtest_images/q1.svg";
 import q2 from "../../assets/iqtest_images/q2.svg";
@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
 
 export default function QuizTest() {
   // STORE DATA IN STATE
-  const [quizData, setQuizData] = useState(quizDataJson);
+  const [quizData /*setQuizData*/] = useState(quizDataJson);
   // STATE TO TRACK CURRENT INDEX
   const [currentIndex, setCurrentIndex] = useState(0);
 

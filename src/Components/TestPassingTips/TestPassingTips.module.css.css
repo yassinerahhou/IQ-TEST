@@ -1,0 +1,63 @@
+.testPassParent {
+  background-color: #eaf7f9;
+}
+
+.passingTestCard {
+  margin: auto;
+  width: 85%;
+  color: #191919;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px;
+  gap: 20px;
+}
+
+.headlineSection {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.headlineTitle {
+  color: #34495e;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.boxTest {
+  border: 2px solid #191919;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.boxTest:hover {
+  transform: translateY(-5px);
+}
+
+.imgCard img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.descriptionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .passingTestCard {
+    grid-template-columns: 1fr;
+  }
+
+  .headlineTitle {
+    font-size: 1.2rem;
+  }
+}

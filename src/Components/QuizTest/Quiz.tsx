@@ -1,5 +1,4 @@
-// Quiz.tsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./quiz.css";
 
@@ -72,14 +71,24 @@ const Quiz: React.FC = () => {
   );
   const [timeLeft, setTimeLeft] = useState(1200); // 20 minutes in seconds
 
+  const calculateScore = useCallback(() => {
+    return userAnswers.reduce((score, answer, index) => {
+      if (answer !== null && questions[index].options[answer].isCorrect) {
+        return (score as number) + 1;
+      }
+      return score;
+    }, 0) as number;
+  }, [userAnswers]);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prevTime) => {
         if (prevTime <= 1) {
           clearInterval(timer);
-          navigate(
-            `/results?score=${calculateScore()}&total=${questions.length}`
-          );
+          const score = calculateScore();
+          if (score !== null && score !== undefined) {
+            navigate(`/results?score=${score}&total=${questions.length}`);
+          }
           return 0;
         }
         return prevTime - 1;
@@ -87,23 +96,25 @@ const Quiz: React.FC = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [navigate]);
+  }, [navigate, calculateScore]);
 
   const handleAnswer = (index: number) => {
-    const newAnswers = [...userAnswers];
-    newAnswers[currentQuestionIndex] = index;
-    setUserAnswers(newAnswers);
+    setUserAnswers((prevAnswers) => {
+      const newAnswers = [...prevAnswers];
+      newAnswers[currentQuestionIndex] = index;
+      return newAnswers;
+    });
   };
 
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     }
   };
 
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(currentQuestionIndex - 1);
+      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
     }
   };
 
@@ -111,20 +122,14 @@ const Quiz: React.FC = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      navigate(`/results?score=${calculateScore()}&total=${questions.length}`);
+      const score = calculateScore();
+      if (score !== null && score !== undefined) {
+        navigate(`/results?score=${score}&total=${questions.length}`);
+      }
     }, 10000);
   };
 
-  const calculateScore = () => {
-    return userAnswers.reduce((score, answer, index) => {
-      if (answer !== null && questions[index].options[answer].isCorrect) {
-        return score + 1;
-      }
-      return score;
-    }, 0);
-  };
-
-  const formatTime = (time: number) => {
+  const formatTime = (time: number): string => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
     return `${minutes.toString().padStart(2, "0")}:${seconds

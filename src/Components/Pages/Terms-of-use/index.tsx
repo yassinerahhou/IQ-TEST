@@ -1,7 +1,13 @@
-import React from "react";
+// import React from "react";
 import "./style.css";
 
-const TermsSection = ({ title, content }) => (
+const TermsSection = ({
+  title,
+  content,
+}: {
+  title: string;
+  content: string;
+}) => (
   <div className="terms-section">
     <h3>{title}</h3>
     <br />
