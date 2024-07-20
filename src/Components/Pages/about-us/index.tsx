@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// import React from "react";
-=======
-import React, { useEffect } from "react";
->>>>>>> b955a90b1dddf8552a1325f3c24bcc8ea3d5aa99
+import { useEffect } from "react";
 import "./style.css";
 import abtimg from "./../../../assets/about-us/about.png";
 

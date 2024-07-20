@@ -18,10 +18,9 @@ const Results: React.FC = () => {
 
   // CALLBACK FUNCTION TO RETIVE NAME JUST FOR CHECKING IF FULL HAVE VALUE OR NOT
   // AND DOING SOME STUFF WITH THAT NAME
-  const getNameValue = (nameValue) => {
+  const getNameValue = (nameValue: string) => {
     setUsername(nameValue);
   };
-
   useEffect(() => {
     scrollTo(0, 0);
   }, []);
@@ -68,11 +67,7 @@ const Results: React.FC = () => {
         </Link>
       </div>
       {isNameModal && (
-        <NameModal
-          nameValue={getNameValue}
-          setIsNameModal={setIsNameModal}
-          isNameModal={isNameModal}
-        />
+        <NameModal nameValue={getNameValue} setIsNameModal={setIsNameModal} />
       )}
     </>
   );

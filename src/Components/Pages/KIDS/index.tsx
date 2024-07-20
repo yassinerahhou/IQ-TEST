@@ -1,9 +1,14 @@
-// src/components/KIDS.tsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./kids.css";
 
-const questions = [
+interface Question {
+  question: string;
+  options: string[];
+  answer: string;
+}
+
+const questions: Question[] = [
   {
     question: "What is 2 + 2?",
     options: ["3", "4", "5", "6"],
@@ -112,14 +117,29 @@ const questions = [
 ];
 
 export default function KIDS() {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [userAnswers, setUserAnswers] = useState<string[]>([]);
-  const [showResults, setShowResults] = useState(false);
+  const [showResults, setShowResults] = useState<boolean>(false);
+  const [timeLeft, setTimeLeft] = useState<number>(30);
+
+  useEffect(() => {
+    if (timeLeft > 0 && !showResults) {
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      return () => clearTimeout(timer);
+    } else if (timeLeft === 0 && !showResults) {
+      handleNextQuestion();
+    }
+  }, [timeLeft, showResults]);
 
   const handleAnswerClick = (answer: string) => {
     setUserAnswers([...userAnswers, answer]);
+    handleNextQuestion();
+  };
+
+  const handleNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setTimeLeft(30);
     } else {
       setShowResults(true);
     }
@@ -131,25 +151,32 @@ export default function KIDS() {
     ).length;
   };
 
+  const restartQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setUserAnswers([]);
+    setShowResults(false);
+    setTimeLeft(30);
+  };
+
   return (
     <div className="kids-quiz-container">
-      {/* KID BG CARD */}
-      <div className="kidsCard">
-        <div className="headlineCard">
-          <h1>IQ TEST FOR KIDS</h1>
-        </div>
-        <div className="descriptionKidsCard">
-          <p>
-            The "Kids IQ Test" offers a playful quiz with multiple-choice
-            questions tailored for children, tracking their progress and showing
-            results at the end. Kids can see their score and easily return to
-            the home page.
-          </p>
-        </div>
-      </div>
       <div className="quiz-content">
+        <div className="kidsCard">
+          <div className="headlineCard">
+            <h1>Brain QI: Kids Challenge</h1>
+          </div>
+          <div className="descriptionKidsCard">
+            <p>
+              Welcome to the Brain QI Kids Challenge! Test your knowledge and
+              have fun with our exciting quiz. Answer quickly and see how many
+              questions you can get right!
+            </p>
+          </div>
+        </div>
+
         {!showResults ? (
           <div className="question-section fadeIn">
+            <div className="timer">Time left: {timeLeft}s</div>
             <h2 className="question-title">
               {questions[currentQuestionIndex].question}
             </h2>
@@ -170,13 +197,23 @@ export default function KIDS() {
           </div>
         ) : (
           <div className="results-section fadeIn">
-            <h2 className="results-title">Your Results</h2>
+            <h2 className="results-title">Your Brain QI Score</h2>
             <p className="results-score">
-              You scored <span className="score-highlight">{getScore()}</span>{" "}
-              out of {questions.length}
+              You got <span className="score-highlight">{getScore()}</span> out
+              of {questions.length} correct!
             </p>
+            <p className="result-message">
+              {getScore() === questions.length
+                ? "Wow! You're a genius! 🎉"
+                : getScore() > questions.length / 2
+                ? "Great job! You're super smart! 🌟"
+                : "Good effort! Keep practicing to improve your Brain QI! 💪"}
+            </p>
+            <button onClick={restartQuiz} className="restart-btn">
+              Try Again
+            </button>
             <Link to="/" className="home-link">
-              Go back to Home
+              Back to Brain QI Home
             </Link>
           </div>
         )}

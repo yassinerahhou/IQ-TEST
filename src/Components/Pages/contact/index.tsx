@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { useState, ChangeEvent, FormEvent } from "react";
-=======
-import React, { useEffect, useState } from "react";
-
->>>>>>> b955a90b1dddf8552a1325f3c24bcc8ea3d5aa99
+import { useEffect, useState, ChangeEvent, FormEvent } from "react";
 import "./style.css";
 
 export default function Contact() {
