@@ -36,14 +36,14 @@ export default function Footer() {
           <br />
           <ul>
             <li>
-              <a className="a_remove_style" href="#">
+              <Link to="/Blog" className="a_remove_style">
                 BLOGS
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="a_remove_style" href="#">
+              <Link to="/KIDS" className="a_remove_style">
                 KIDS
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/Start" className="a_remove_style">
@@ -83,6 +83,26 @@ export default function Footer() {
       <div className="copyright_section">
         <p id="copyright">
           &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+        </p>
+        <p id="copyright">
+          Made with love by
+          <a
+            href="https://www.linkedin.com/in/yassine-rahhou"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Yassine
+          </a>{" "}
+          &
+          <a
+            href="https://www.linkedin.com/in/zakaria-elaroussi-609121223/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Zakaria
+          </a>
         </p>
       </div>
     </footer>

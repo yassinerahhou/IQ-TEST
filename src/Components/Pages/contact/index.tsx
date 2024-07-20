@@ -75,7 +75,7 @@ export default function Contact() {
           </p>
           <ul>
             <li>
-              <strong>Email:</strong> info@iqtest.com
+              <strong>Email:</strong> yacine.rahhou@gmail.com
             </li>
             <li>
               <strong>Phone:</strong> +1 (123) 456-7890

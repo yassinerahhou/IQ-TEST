@@ -1,112 +1,70 @@
 import React from "react";
-import "./Pricing.css"; // Import your CSS file
+import "./Pricing.css";
 
-interface PricingCardProps {
-  title: string;
-  features: string[];
-  price: string;
-  buttonText: string;
-  onClick: () => void;
+export default function Prices() {
+  const plans = [
+    {
+      name: "STARTER",
+      price: "FREE",
+      duration: "Limited Time",
+      features: [
+        "Basic IQ test with limited questions",
+        "Basic result overview",
+        "Ad-supported experience",
+      ],
+      color: "starter",
+    },
+    {
+      name: "ADVANCED",
+      price: "FREE",
+      duration: "Limited Time",
+      features: [
+        "Full access to all IQ test questions",
+        "Detailed result analysis",
+        "Download results in PDF",
+        "Ad-free experience",
+      ],
+      color: "advanced",
+    },
+    {
+      name: "PREMIUM",
+      price: "FREE",
+      duration: "Limited Time",
+      features: [
+        "All features of Advanced",
+        "Personalized cognitive improvement tips",
+        "Store your Tests in your personal account",
+        "Historical test results and progress tracking",
+      ],
+      color: "premium",
+    },
+  ];
+
+  return (
+    <div className="pricing-container">
+      <h1 className="pricing-title">Choose Your Plan</h1>
+      <p className="pricing-subtitle">
+        All plans are currently free for a limited time!
+      </p>
+      <div className="pricing-cards">
+        {plans.map((plan, index) => (
+          <div key={index} className={`pricing-card ${plan.color}`}>
+            <div className="card-header">
+              <h2>{plan.name}</h2>
+              <div className="price">
+                <span className="amount">{plan.price}</span>
+                <span className="duration">{plan.duration}</span>
+              </div>
+            </div>
+            <ul className="features">
+              {plan.features.map((feature, featureIndex) => (
+                <li key={featureIndex}>{feature}</li>
+              ))}
+            </ul>
+            <button className="select-plan">Get Started</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
-
-const PricingCard: React.FC<PricingCardProps> = ({
-  title,
-  features,
-  price,
-  buttonText,
-  onClick,
-}) => {
-  return (
-    <div className="pricing-card">
-      <h2>{title}</h2>
-      {features.map((feature, index) => (
-        <p key={index}>{feature}</p>
-      ))}
-      <p>{price}</p>
-      <button onClick={onClick}>{buttonText}</button>
-    </div>
-  );
-};
-
-const Pricing: React.FC = () => {
-  const handleFreeClick = () => {
-    console.log("Free plan selected");
-  };
-
-  const handleStandardClick = () => {
-    console.log("Standard plan selected");
-  };
-
-  const handlePremiumClick = () => {
-    console.log("Premium plan selected");
-  };
-
-  return (
-    <div className="pricing">
-      <h1>Choose Your Plan</h1>
-      <div className="pricing-tiers">
-        <PricingCard
-          title="Free"
-          features={[
-            "Basic IQ test with limited questions",
-            "Basic result overview",
-            "Ads supported",
-          ]}
-          price="Free"
-          buttonText="Get Started"
-          onClick={handleFreeClick}
-        />
-        <PricingCard
-          title="Standard"
-          features={[
-            "Full access to all IQ test questions",
-            "Detailed result analysis",
-            "Ad-free experience",
-            "Basic cognitive insights",
-          ]}
-          price="$9.99/month or $99/year"
-          buttonText="Sign Up"
-          onClick={handleStandardClick}
-        />
-        <PricingCard
-          title="Premium"
-          features={[
-            "All features of Standard",
-            "Personalized cognitive improvement tips",
-            "Historical test results and progress tracking",
-            "Premium customer support",
-          ]}
-          price="$19.99/month or $199/year"
-          buttonText="Get Premium"
-          onClick={handlePremiumClick}
-        />
-      </div>
-      <div className="faq">
-        <h3>Frequently Asked Questionss</h3>
-        <div className="faq-item">
-          <h4>What is included in the free plan?</h4>
-          <p>
-            The free plan includes a basic IQ test with limited questions and a
-            basic result overview. It is supported by ads.
-          </p>
-        </div>
-        <div className="faq-item">
-          <h4>Can I cancel my subscription?</h4>
-          <p>
-            Yes, you can cancel your subscription at any time. If you are not
-            satisfied, we offer a 30-day money-back guarantee.
-          </p>
-        </div>
-        <div className="faq-item">
-          <h4>How do I contact customer support?</h4>
-          <p>
-            You can reach our customer support team via email at
-            support@iqtest.com or through our contact page.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Pricing;
