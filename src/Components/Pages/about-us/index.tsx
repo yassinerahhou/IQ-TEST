@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // import React from "react";
+=======
+import React, { useEffect } from "react";
+>>>>>>> b955a90b1dddf8552a1325f3c24bcc8ea3d5aa99
 import "./style.css";
 import abtimg from "./../../../assets/about-us/about.png";
 
 export default function About() {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="about-container">
       <h1 className="about-title">About Brain IQ</h1>
