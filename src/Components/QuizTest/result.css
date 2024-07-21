@@ -1,6 +1,6 @@
 /* results.css */
 .results-container {
-  max-width: 600px;
+  /* max-width: 600px; */
   width: 90%;
   margin: 2rem auto;
   padding: 2rem;
@@ -81,4 +81,12 @@
 
 .home-button:hover {
   background-color: #0056b3;
+}
+
+.downloaditBtn {
+  margin-top: 20px;
+}
+
+.downloaditBtn {
+  margin-left: 10px;
 }

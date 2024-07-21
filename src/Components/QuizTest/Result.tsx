@@ -1,26 +1,37 @@
-// Results.tsx
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
-import "./result.css";
+import ReactToPrint from "react-to-print";
+import html2canvas from "html2canvas";
+import Certificate from "../Certificate";
 import NameModal from "../Modals/NameModal";
+import "./result.css";
 
 const Results: React.FC = () => {
-  // STATE FOR SHOWING MODAL NAME
   const [isNameModal, setIsNameModal] = useState(false);
   const [username, setUsername] = useState("");
-
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const score = parseInt(searchParams.get("score") || "0", 10);
   const total = parseInt(searchParams.get("total") || "0", 10);
-
   const percentage = Math.round((score / total) * 100);
 
-  // CALLBACK FUNCTION TO RETIVE NAME JUST FOR CHECKING IF FULL HAVE VALUE OR NOT
-  // AND DOING SOME STUFF WITH THAT NAME
   const getNameValue = (nameValue: string) => {
     setUsername(nameValue);
   };
+
+  const certificateRef = useRef<HTMLDivElement>(null);
+
+  const handleDownloadPNG = () => {
+    if (certificateRef.current) {
+      html2canvas(certificateRef.current).then((canvas) => {
+        const link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "certificate.png";
+        link.click();
+      });
+    }
+  };
+
   useEffect(() => {
     scrollTo(0, 0);
   }, []);
@@ -37,12 +48,24 @@ const Results: React.FC = () => {
         <p>
           You scored {score} out of {total} questions correctly.
         </p>
-        {/* DIV FOR FORM NAME AND GIVE USER certificate WITH BANE */}
-        <div onClick={() => setIsNameModal(!isNameModal)} className="nameDiv">
+        <div className="nameDiv">
           {username ? (
-            <button>DOWNLOAD IT!</button>
+            <div>
+              <Certificate username={username} ref={certificateRef} />
+              <ReactToPrint
+                trigger={() => (
+                  <button className="downloaditBtn">DOWNLOAD IT PDF</button>
+                )}
+                content={() => certificateRef.current}
+              />
+              <button onClick={handleDownloadPNG} className="downloaditBtn">
+                DOWNLOAD IT PNG
+              </button>
+            </div>
           ) : (
-            <button>FILL THE FORM AND GET INSTANT CERTIFICATE</button>
+            <button onClick={() => setIsNameModal(!isNameModal)}>
+              FILL THE FORM AND GET INSTANT CERTIFICATE
+            </button>
           )}
         </div>
         <div className="result-message">

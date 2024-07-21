@@ -47,14 +47,7 @@ export default function Navbar() {
             <ul className={styles.ul_nav}>
               {navItems.map((item) => (
                 <li key={item.path} className={styles.li_nav}>
-                  <Link
-                    to={item.path}
-                    className={
-                      location === item.path
-                        ? styles.selected_item
-                        : styles.remove_dec
-                    }
-                  >
+                  <Link to={item.path} className={styles.remove_dec}>
                     {item.label}
                   </Link>
                 </li>
@@ -62,7 +55,9 @@ export default function Navbar() {
             </ul>
           </div>
           <div className={styles.access_div}>
-            <button className={styles.li_nav_access}>GET STARTED</button>
+            <Link to="/Quiz">
+              <button className={styles.li_nav_access}>GET STARTED</button>
+            </Link>
           </div>
         </nav>
       </header>

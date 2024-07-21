@@ -25,6 +25,7 @@ import Results from "../QuizTest/Result";
 import Contact from "../Pages/contact";
 import Privacy from "../Pages/privacy-policy";
 import Terms from "../Pages/Terms-of-use";
+import Certificate from "../Certificate";
 export default function Layout() {
   return (
     <>
@@ -51,6 +52,7 @@ export default function Layout() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/privacy_policy" element={<Privacy />} />
           <Route path="/terms-of-use" element={<Terms />} />
+          <Route path="/Certificate" element={<Certificate />} />
         </Routes>
 
         <Footer />
