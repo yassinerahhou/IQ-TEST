@@ -3,6 +3,7 @@ import articles_data from "../../articles.json";
 
 // IMPORT IMG ARTICLE TEST
 import img_article_1 from "../../../assets/Articles_images/post_1.png";
+import { useEffect } from "react";
 
 // Define the type for the article data
 interface Article {
@@ -12,6 +13,10 @@ interface Article {
 }
 
 export default function Blog() {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={styles.articles}>
       {articles_data.map((article: Article, index: number) => {

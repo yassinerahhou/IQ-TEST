@@ -2,6 +2,7 @@ import styles from "./ittestinfo.module.scss";
 
 // DIAGRAM IMG
 import diagram_img from "../../assets/diagram_imgs/graph_digram.png";
+import { Link } from "react-router-dom";
 
 export default function IQTestInfo() {
   return (
@@ -31,9 +32,11 @@ export default function IQTestInfo() {
             </div>
           </div>
           <div className={styles.btn_start_test}>
-            <button className={`${styles.btn_taketest} btn btn-primary`}>
-              TAKE THE TEST
-            </button>
+            <Link to="/Quiz">
+              <button className={`${styles.btn_taketest} btn btn-primary`}>
+                TAKE THE TEST
+              </button>
+            </Link>
           </div>
         </div>
       </div>

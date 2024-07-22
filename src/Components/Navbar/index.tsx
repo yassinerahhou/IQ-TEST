@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./navbar.module.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import logo from "./../../assets/logi1.png";
 
 export default function Navbar() {
-  const location = useLocation().pathname;
   const [isMobileMenu, setIsMobileMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -64,7 +63,14 @@ export default function Navbar() {
 
       {/* Mobile Menu Toggle */}
       <div className={styles.mobile_menu_toggle} onClick={toggleMobileMenu}>
-        <i className={`fa ${isMobileMenu ? "fa-times" : "fa-bars"}`}></i>
+        <div className={styles.logo_div}>
+          <Link to="/Home" className={styles.logoLink}>
+            <img src={logo} width={"auto"} alt="" />
+          </Link>
+        </div>
+        <div>
+          <i className={`fa ${isMobileMenu ? "fa-times" : "fa-bars"}`}></i>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -76,11 +82,7 @@ export default function Navbar() {
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className={
-                      location === item.path
-                        ? styles.selected_item
-                        : styles.remove_dec
-                    }
+                    className={styles.remove_dec}
                     onClick={toggleMobileMenu}
                   >
                     <i className={`fa ${item.icon}`}></i> {item.label}
@@ -89,7 +91,9 @@ export default function Navbar() {
               ))}
             </ul>
           </nav>
-          <button className={styles.mobile_cta}>GET STARTED</button>
+          <Link to="/Quiz">
+            <button className={styles.li_nav_access}>GET STARTED</button>
+          </Link>
         </div>
       )}
       <br />

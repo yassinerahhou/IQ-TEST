@@ -117,6 +117,10 @@ const questions: Question[] = [
 ];
 
 export default function KIDS() {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [userAnswers, setUserAnswers] = useState<string[]>([]);
   const [showResults, setShowResults] = useState<boolean>(false);

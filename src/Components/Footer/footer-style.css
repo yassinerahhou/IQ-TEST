@@ -118,4 +118,5 @@ li {
 h1,
 a {
   font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }

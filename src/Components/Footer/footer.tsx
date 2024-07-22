@@ -1,5 +1,4 @@
 // import React from "react";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./footer-style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,10 +10,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import logo from "./../../assets/logo2.png";
 export default function Footer() {
-  useEffect(() => {
-    scrollTo(0, 0);
-  }, []);
-
   return (
     <footer>
       <div className="parrent-div">
