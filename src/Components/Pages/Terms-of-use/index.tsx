@@ -1,4 +1,5 @@
 // import React from "react";
+import { useEffect } from "react";
 import "./style.css";
 
 const TermsSection = ({
@@ -16,6 +17,10 @@ const TermsSection = ({
 );
 
 export default function Terms() {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="terms-container">
       <div className="terms-content">
