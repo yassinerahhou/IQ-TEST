@@ -33,6 +33,26 @@ const questions: Question[] = [
     ],
   },
   {
+    type: "text",
+    question: "5. 4, 6, 9, 6, 14, 6, ?:",
+    options: [
+      { text: "14", isCorrect: false },
+      { text: "9", isCorrect: false },
+      { text: "19", isCorrect: true },
+      { text: "16", isCorrect: false },
+    ],
+  },
+  {
+    type: "text",
+    question: "29. 831, 842, 853, 864, 875, ?:",
+    options: [
+      { text: "880 ", isCorrect: false },
+      { text: "886", isCorrect: true },
+      { text: "890", isCorrect: false },
+      { text: "892", isCorrect: false },
+    ],
+  },
+  {
     type: "image",
     question: "Which figure completes the pattern?",
     questionImage: q1,
