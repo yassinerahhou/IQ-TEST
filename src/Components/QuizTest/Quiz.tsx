@@ -5,6 +5,11 @@ import "./quiz.css";
 // Import your images here
 import q1 from "../../assets/iqtest_images/q1.svg";
 import LoadingModal from "../Modals/LoadingModal";
+import quest_1 from "../../assets/iqtest_images/q1/Q1-01.svg";
+import answer_1 from "../../assets/iqtest_images/q1/Q1-02.svg";
+import answer_2 from "../../assets/iqtest_images/q1/Q1-03.svg";
+import answer_3 from "../../assets/iqtest_images/q1/Q1-04.svg";
+import answer_4 from "../../assets/iqtest_images/q1/Q1-07.svg";
 // Import other images as needed
 
 interface Option {
@@ -21,6 +26,22 @@ interface Question {
 }
 
 const questions: Question[] = [
+  {
+    type: "image",
+    question: "Which figure completes the pattern?",
+    questionImage: quest_1,
+    // change q1 to real suggestions
+    options: [
+      {
+        text: "A",
+        image: answer_1,
+        isCorrect: false,
+      },
+      { text: "B", image: answer_2, isCorrect: false },
+      { text: "C", image: answer_3, isCorrect: true },
+      { text: "D", image: answer_4, isCorrect: false },
+    ],
+  },
   {
     type: "text",
     question:
