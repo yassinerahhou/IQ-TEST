@@ -52,7 +52,7 @@ export default function Layout() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/privacy_policy" element={<Privacy />} />
           <Route path="/terms-of-use" element={<Terms />} />
-          <Route path="/Certificate" element={<Certificate />} />
+          <Route path="/Certificate" element={<Certificate username={""} />} />
         </Routes>
 
         <Footer />

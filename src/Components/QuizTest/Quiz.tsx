@@ -101,6 +101,23 @@ const questions: Question[] = [
     ],
   },
   // Add more questions here...
+  // QUESTION 7
+  {
+    type: "image",
+    question: "Choose your answer?",
+    questionImage: "https://i.imgur.com/u84UDVB.png",
+    // change q1 to real suggestions
+    options: [
+      {
+        text: "A",
+        image: "https://i.imgur.com/u84UDVB.png",
+        isCorrect: false,
+      },
+      { text: "B", image: q1, isCorrect: false },
+      { text: "C", image: q1, isCorrect: true },
+      { text: "D", image: q1, isCorrect: false },
+    ],
+  },
 ];
 
 const Quiz: React.FC = () => {
