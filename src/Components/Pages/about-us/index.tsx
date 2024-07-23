@@ -93,7 +93,7 @@ export default function About() {
             </div>
             <div className="developer">
               <h3>Zakaria Elaroussi</h3>
-              br
+              <br />
               <p>Co-founder & UX Specialist</p>
               <div className="social-links">
                 <a

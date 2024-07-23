@@ -1,26 +1,23 @@
 /* quiz.css */
 .quiz-container {
   max-width: 800px;
-  /* border: 1px solid red; */
   width: 90%;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #ffffff;
-  height: 450px;
+  min-height: 450px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 10px;
-  /* margin-bottom: 30px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .quiz-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .quiz-header h2 {
@@ -35,7 +32,10 @@
 }
 
 .question-container {
-  margin-bottom: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .question-text {
@@ -46,7 +46,8 @@
 
 .question-image {
   max-width: 100%;
-  height: auto;
+  max-height: 200px;
+  object-fit: contain;
   margin-bottom: 1rem;
   border-radius: 8px;
 }
@@ -55,6 +56,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .option-button {
@@ -65,7 +67,11 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .option-button:hover {
@@ -78,10 +84,17 @@
   border-color: #007bff;
 }
 
+.option-image {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
 .navigation-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .navigation-buttons button {
@@ -116,16 +129,8 @@
   .options-container {
     grid-template-columns: 1fr;
   }
-}
-.option-image {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
 
-.option-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  .option-button {
+    width: 100%;
+  }
 }
