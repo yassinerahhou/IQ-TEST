@@ -57,7 +57,7 @@ const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
                 />
               </div>
               <div className={styles.ownersname}>
-                <p>Yassin Rahou</p>
+                <p>Yassine Rahhou</p>
               </div>
               <div className={styles.role}>
                 <p>Owner Brain IQ, Software Engineer</p>
