@@ -1,7 +1,12 @@
 // import React from "react";
+import { useEffect } from "react";
 import "./style.css";
 
 export default function Privacy() {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="privacy-container">
       <header className="privacy-header">
