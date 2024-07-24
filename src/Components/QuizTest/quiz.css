@@ -125,6 +125,12 @@
   background-color: #218838 !important;
 }
 
+.qouteList {
+  border-bottom: 2px solid royalblue;
+  padding: 10px;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .options-container {
     grid-template-columns: 1fr;

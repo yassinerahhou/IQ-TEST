@@ -21,12 +21,16 @@
 }
 
 .h1_headline {
-  width: 100%;
+  /* width: 100%;
   background-color: white;
   text-align: center;
   color: #34495e;
   font-weight: 300;
-  border-radius: 10px;
+  border-radius: 10px; */
+  font-weight: 300;
+  color: #34495e;
+  font-size: 20px;
+  letter-spacing: 3px;
 }
 
 h1 {

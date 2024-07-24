@@ -121,6 +121,21 @@ const questions: Question[] = [
 ];
 
 const Quiz: React.FC = () => {
+  // QOUTE LIST U CAN ADD MUCH AS U WANT
+  const quotes = [
+    "Boost your brainpower! 🧠✨",
+    "Unlock your potential! 🔓📊",
+    "Challenge your mind! 🧩🤔",
+    "Discover your IQ! 🎯🔍",
+    "How sharp is your mind? 🧠📝",
+    "Get IQ insights! 💡🧠",
+    "Elevate your brain game! 🚀🧠",
+    "Just 3% pass the test at 100%! 🚀📉",
+  ];
+
+  // STATE FOR QOUTE FOR FUN ABOUT RATING AND PPL PASS THIS TEST
+  const [qouteCurrentIndex, setQouteCurrentIndex] = useState(0);
+
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -197,6 +212,15 @@ const Quiz: React.FC = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  // USEFFET FOR QOUTE PASS AUTO PALY FOR SOME SEC
+  useEffect(() => {
+    const indexInterval = setInterval(() => {
+      setQouteCurrentIndex((pstate) => (pstate + 1) % quotes.length);
+    }, 5000);
+
+    return () => clearInterval(indexInterval);
+  }, []);
+
   return (
     <>
       <div className="quiz-container">
@@ -204,6 +228,10 @@ const Quiz: React.FC = () => {
           <h2>
             Question {currentQuestionIndex + 1} of {questions.length}
           </h2>
+          {/* QOUTES  */}
+          <div className="qouteList">
+            <p>{quotes[qouteCurrentIndex]}</p>
+          </div>
           <div className="timer">Time left: {formatTime(timeLeft)}</div>
         </div>
         <div className="question-container">
