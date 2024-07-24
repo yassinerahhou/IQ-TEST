@@ -37,7 +37,7 @@ const NameModal: React.FC<NameModalProps> = ({ setIsNameModal, nameValue }) => {
           </div>
           <form onSubmit={handleSendName} className={styles.inputBtn}>
             <input
-              placeholder="Your Name"
+              placeholder="Your Full Name"
               type="text"
               name="name"
               id="name"

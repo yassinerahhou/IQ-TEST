@@ -3,6 +3,7 @@ import styles from "./certificate.module.scss";
 import logoCertificate from "../../assets/logi1.png";
 import signatureImg from "../../assets/signature_Imgs/image.png";
 import signatureImg2 from "../../assets/signature_Imgs/img_2.svg";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Define the props interface
 interface CertificateProps {
@@ -20,6 +21,7 @@ const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
           </div>
           <div className={styles.headlineCertificate}>
             <h1>CERTIFICATE OF COMPLETION</h1>
+            <i className={`${styles.iconAward} bi bi-award`}></i>
           </div>
           <div className={styles.subheadlineName}>
             <p>This is awarded to :</p>

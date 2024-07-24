@@ -85,8 +85,15 @@
 
 .downloaditBtn {
   margin-top: 20px;
+  border: 1px solid red;
+  margin-left: 10px;
 }
 
-.downloaditBtn {
-  margin-left: 10px;
+.achievementP {
+  /* border: 1px solid black; */
+  width: 70%;
+  margin: auto;
+  padding: 5px;
+  background-color: gold;
+  border-radius: 10px;
 }

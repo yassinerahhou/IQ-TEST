@@ -52,15 +52,17 @@ const Results: React.FC = () => {
           {username ? (
             <div>
               <Certificate username={username} ref={certificateRef} />
-              <ReactToPrint
-                trigger={() => (
-                  <button className="downloaditBtn">DOWNLOAD IT PDF</button>
-                )}
-                content={() => certificateRef.current}
-              />
-              <button onClick={handleDownloadPNG} className="downloaditBtn">
-                DOWNLOAD IT PNG
-              </button>
+              <div>
+                <ReactToPrint
+                  trigger={() => (
+                    <button className="downloaditBtn">DOWNLOAD IT PDF</button>
+                  )}
+                  content={() => certificateRef.current}
+                />
+                <button onClick={handleDownloadPNG} className="downloaditBtn">
+                  DOWNLOAD IT PNG
+                </button>
+              </div>
             </div>
           ) : (
             <button onClick={() => setIsNameModal(!isNameModal)}>
@@ -79,9 +81,9 @@ const Results: React.FC = () => {
               improvement.
             </p>
           ) : (
-            <p>
+            <p className="achievementP">
               Keep practicing! You can enhance your logical thinking skills with
-              more exercises.
+              more exercises. ⭐
             </p>
           )}
         </div>

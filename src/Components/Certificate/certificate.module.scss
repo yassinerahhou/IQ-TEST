@@ -33,12 +33,21 @@
 // HEADLINE
 .headlineCertificate {
   // border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   h1 {
     color: black;
     font-size: 25px;
+    font-family: 900;
     padding: 10px;
   }
+}
+
+.iconAward {
+  color: #72adcf;
+  font-size: 56px;
 }
 
 .subheadlineName {
