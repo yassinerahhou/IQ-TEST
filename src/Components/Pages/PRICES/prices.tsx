@@ -1,45 +1,44 @@
-// import React from "react";
 import "./Pricing.css";
 
-export default function Prices() {
-  const plans = [
-    {
-      name: "STARTER",
-      price: "FREE",
-      duration: "Limited Time",
-      features: [
-        "Basic IQ test with limited questions",
-        "Basic result overview",
-        "Ad-supported experience",
-      ],
-      color: "starter",
-    },
-    {
-      name: "ADVANCED",
-      price: "FREE",
-      duration: "Limited Time",
-      features: [
-        "Full access to all IQ test questions",
-        "Detailed result analysis",
-        "Download results in PDF",
-        "Ad-free experience",
-      ],
-      color: "advanced",
-    },
-    {
-      name: "PREMIUM",
-      price: "FREE",
-      duration: "Limited Time",
-      features: [
-        "All features of Advanced",
-        "Personalized cognitive improvement tips",
-        "Store your Tests in your personal account",
-        "Historical test results and progress tracking",
-      ],
-      color: "premium",
-    },
-  ];
+const plans = [
+  {
+    name: "STARTER",
+    price: "FREE",
+    duration: "Limited Time",
+    features: [
+      "Basic IQ test with limited questions",
+      "Basic result overview",
+      "Ad-supported experience",
+    ],
+    color: "starter",
+  },
+  {
+    name: "ADVANCED",
+    price: "FREE",
+    duration: "Limited Time",
+    features: [
+      "Full access to all IQ test questions",
+      "Detailed result analysis",
+      "Download results in PDF",
+      "Ad-free experience",
+    ],
+    color: "advanced",
+  },
+  {
+    name: "PREMIUM",
+    price: "FREE",
+    duration: "Limited Time",
+    features: [
+      "All features of Advanced",
+      "Personalized cognitive improvement tips",
+      "Store your Tests in your personal account",
+      "Historical test results and progress tracking",
+    ],
+    color: "premium",
+  },
+];
 
+export default function Prices() {
   return (
     <div className="pricing-container">
       <h1 className="pricing-title">Choose Your Plan</h1>

@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import styles from "./blog.module.scss";
 import articles_data from "../../articles.json";
+<<<<<<< HEAD
 import img_article_1 from "../../../assets/Articles_images/post_1.png";
+=======
+// import img_article_1 from "../../../assets/Articles_images/ost_1.png";
+>>>>>>> eb8b8b9d26ede1de0884c713217150b878257ba9
 
 interface Article {
   title: string;
@@ -23,7 +27,7 @@ const Blog: React.FC = () => {
             <div className={styles.articleImage}>
               <img
                 className={styles.imgPostClass}
-                src={article.image_url || img_article_1}
+                src={article.image_url}
                 alt={`Article ${index + 1}`}
               />
             </div>
