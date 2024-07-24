@@ -38,12 +38,13 @@
   .h1_headline {
     color: #34495e;
     font-weight: 300;
+    font-size: 20px;
     letter-spacing: 3px;
   }
 }
 // BOXXS OF SECTION
 .box_test {
-  border: 2px solid grey;
+  border: 5px solid white;
   border-radius: 5px;
 
   display: grid;

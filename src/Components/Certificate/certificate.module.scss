@@ -157,3 +157,10 @@
 .datagetCef {
   font-weight: 600;
 }
+
+@media only screen and (max-width: 768px) {
+  .certficateContainer {
+    // border: 1px solid red;
+    width: 100%;
+  }
+}

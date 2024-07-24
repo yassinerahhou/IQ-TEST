@@ -182,7 +182,10 @@
 
   .mobile_menu_toggle {
     display: block;
+    background-color: white;
     width: 90%;
+    padding: 10px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

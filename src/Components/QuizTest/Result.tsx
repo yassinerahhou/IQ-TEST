@@ -52,15 +52,20 @@ const Results: React.FC = () => {
           {username ? (
             <div>
               <Certificate username={username} ref={certificateRef} />
-              <div>
+              <div className="BTNSwa">
                 <ReactToPrint
                   trigger={() => (
-                    <button className="downloaditBtn">DOWNLOAD IT PDF</button>
+                    <button className="downloaditBtn">
+                      DOWNLOAD IT PDF{" "}
+                      <i className={`iconPdf bi bi-filetype-pdf`}></i>
+                    </button>
                   )}
                   content={() => certificateRef.current}
                 />
+                {/* <button className="Orsplit">OR</button> */}
                 <button onClick={handleDownloadPNG} className="downloaditBtn">
-                  DOWNLOAD IT PNG
+                  DOWNLOAD IT PNG{" "}
+                  <i className={`iconPng bi bi-filetype-png`}></i>
                 </button>
               </div>
             </div>
