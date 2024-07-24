@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./blog.module.scss";
 import articles_data from "../../articles.json";
-import img_article_1 from "../../../assets/Articles_images/Post_1.png";
+import img_article_1 from "../../../assets/Articles_images/ost_1.png";
 
 interface Article {
   title: string;
