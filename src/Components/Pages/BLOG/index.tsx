@@ -1,41 +1,42 @@
+import React, { useEffect } from "react";
 import styles from "./blog.module.scss";
 import articles_data from "../../articles.json";
-
-// IMPORT IMG ARTICLE TEST
 import img_article_1 from "../../../assets/Articles_images/post_1.png";
-import { useEffect } from "react";
 
-// Define the type for the article data
 interface Article {
   title: string;
   para_article: string;
   image_url: string;
 }
 
-export default function Blog() {
+const Blog: React.FC = () => {
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className={styles.articles}>
-      {articles_data.map((article: Article, index: number) => {
-        return (
-          <div key={index} className={styles.card_article}>
-            <div className={styles.article_image}>
+    <div className={styles.blogContainer}>
+      <h1 className={styles.blogTitle}>Latest Articles</h1>
+      <div className={styles.articles}>
+        {articles_data.map((article: Article, index: number) => (
+          <article key={index} className={styles.cardArticle}>
+            <div className={styles.articleImage}>
               <img
-                className={styles.img_post_class}
+                className={styles.imgPostClass}
                 src={article.image_url || img_article_1}
-                alt={`img post ${index + 1}`}
+                alt={`Article ${index + 1}`}
               />
             </div>
-            <div className={styles.less_info_article}>
-              <h1 className={styles.title_article}>{article.title}</h1>
-              <p>{article.para_article}</p>
+            <div className={styles.articleContent}>
+              <h2 className={styles.titleArticle}>{article.title}</h2>
+              <p className={styles.articleExcerpt}>{article.para_article}</p>
+              <button className={styles.readMoreBtn}>Read More</button>
             </div>
-          </div>
-        );
-      })}
+          </article>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default Blog;

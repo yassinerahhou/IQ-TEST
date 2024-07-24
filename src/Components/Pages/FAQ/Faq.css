@@ -1,48 +1,103 @@
-.faq-item {
-  margin-bottom: 30px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px 100px;
+  font-family: "Arial", sans-serif;
 }
 
-.faq-item h2 {
+.h1_faq {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  flex-grow: 1;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
   color: #4e6f91;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .answer {
-  display: none;
-  font-size: 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px;
+  font-size: 1rem;
   line-height: 1.6;
+  color: #666;
 }
 
 .answer.active {
-  display: block;
+  max-height: 300px;
+  padding: 0 20px 20px;
 }
 
-.faq-container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-direction: column; /* Ensures children stack vertically */
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
-  margin-top: 20px;
-  gap: 10px;
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* MEDIA QUERY FOR SMALL SCREENS */
-@media (max-width: 480px) {
-  /* .faq-item h2 {
-    font-size: 22px;
-  } */
+.scroll-top-btn {
+  background-color: #4e6f91;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
-  .faq-container {
-    font-size: 18px;
+.scroll-top-btn:hover {
+  background-color: #3a5a7a;
+}
+
+@media (max-width: 600px) {
+  .h1_faq {
+    font-size: 2rem;
+  }
+
+  .faq-question h2 {
+    font-size: 1.1rem;
+  }
+
+  .answer {
+    font-size: 0.9rem;
+  }
+
+  .scroll-top-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }
