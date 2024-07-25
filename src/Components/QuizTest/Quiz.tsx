@@ -3,13 +3,30 @@ import { useNavigate } from "react-router-dom";
 import "./quiz.css";
 
 // Import your images here
-import q1 from "../../assets/iqtest_images/q1.svg";
+// import q1 from "../../assets/iqtest_images/q1.svg";
 import LoadingModal from "../Modals/LoadingModal";
 import quest_1 from "../../assets/iqtest_images/q1/Q1-01.svg";
 import answer_1 from "../../assets/iqtest_images/q1/Q1-02.svg";
 import answer_2 from "../../assets/iqtest_images/q1/Q1-03.svg";
 import answer_3 from "../../assets/iqtest_images/q1/Q1-04.svg";
 import answer_4 from "../../assets/iqtest_images/q1/Q1-07.svg";
+import q14 from "../../assets/q14/Q14.svg";
+import q14_01 from "../../assets/q14/q14-01.svg";
+import q14_02 from "../../assets/q14/q14-02.svg";
+import q14_03 from "../../assets/q14/a14-03.svg";
+import q14_04_r from "../../assets/q14/q14-r.svg";
+
+import q16 from "../../assets/q16/q16.svg";
+import q16_1 from "../../assets/q16/q16-01.svg";
+import q16_2 from "../../assets/q16/q16-2.svg";
+import q16_3 from "../../assets/q16/q16-03.svg";
+import q16_r from "../../assets/q16/q16_r.svg";
+
+import q17 from "../../assets/q17/q17.svg";
+import q17_1 from "../../assets/q17/q17-1.svg";
+import q17_2 from "../../assets/q17/q17-2.svg";
+import q17_3 from "../../assets/q17/q17-3.svg";
+import q17_r from "../../assets/q17/q17-r.svg";
 // Import other images as needed
 
 interface Option {
@@ -26,6 +43,118 @@ interface Question {
 }
 
 const questions: Question[] = [
+  // update questin 7/25
+  {
+    type: "text",
+    question: "How many months in a year have at least 28 days?",
+    options: [
+      { text: "february", isCorrect: false },
+      {
+        text: "All months of the year have 28 days, January to December.",
+        isCorrect: true,
+      },
+      { text: "january", isCorrect: false },
+      { text: " December", isCorrect: false },
+    ],
+  },
+  {
+    type: "text",
+    question:
+      "You need to enter a dark room and only have one match. What do you light first: an oil heater, an oil lamp, or a candle?",
+    options: [
+      { text: "An oil heater", isCorrect: false },
+      {
+        text: "The match",
+        isCorrect: true,
+      },
+      { text: "A candle", isCorrect: false },
+      { text: " An oil lamp", isCorrect: false },
+    ],
+  },
+  {
+    type: "text",
+    question: "What number comes next in the sequence: 2, 4, 8, 16, ?:",
+    options: [
+      { text: "24", isCorrect: false },
+      { text: "32", isCorrect: true },
+      { text: "64", isCorrect: false },
+      { text: "128", isCorrect: false },
+    ],
+  },
+  // question 2
+  {
+    type: "text",
+    question:
+      "If a clock shows 3:45, what is the angle between the hour and minute hands?",
+    options: [
+      { text: "90°", isCorrect: false },
+      { text: "97.5°", isCorrect: true },
+      { text: "82.5°", isCorrect: false },
+      { text: " 75°", isCorrect: false },
+    ],
+  },
+  // question 3
+  {
+    type: "text",
+    question:
+      "Sally is 54 years old, and her mother is 80. How many years ago was Sally's mother three times Sally's age?",
+    options: [
+      { text: "24", isCorrect: false },
+      { text: "26", isCorrect: true },
+      { text: "28", isCorrect: false },
+      { text: "30", isCorrect: false },
+    ],
+  },
+  // qustion 4
+  {
+    type: "text",
+    question: "If all Zips are Zaps, and some Zaps are Zops, then:",
+    options: [
+      { text: "All Zips are definitely Zops", isCorrect: false },
+      { text: "Some Zips might be Zops", isCorrect: true },
+      { text: "No Zips are Zops", isCorrect: false },
+      { text: "All Zops are definitely Zips", isCorrect: false },
+    ],
+  },
+  // question 5
+  {
+    type: "text",
+    question: "If MONDAY is coded as QSRHEZ, how would TUESDAY be coded?",
+    options: [
+      { text: "VWIWHEZ", isCorrect: false },
+      { text: "XYGWHEZ", isCorrect: true },
+      { text: "XYGWHEZ", isCorrect: false },
+      { text: "VWIWHEZ", isCorrect: false },
+    ],
+  },
+  // questions 6
+  {
+    type: "text",
+    question:
+      "If a man walks 1 km south, then 1 km east, then 1 km north, where is he in relation to his starting point?",
+    options: [
+      { text: " 1 km west", isCorrect: false },
+      { text: "1 km east", isCorrect: true },
+      { text: "Back where he started", isCorrect: false },
+      { text: " 1 km south", isCorrect: false },
+    ],
+  },
+  // questions7
+  {
+    type: "text",
+    question: " 74, 83, 92, 101, 110",
+    options: [
+      { text: "118", isCorrect: false },
+      {
+        text: "119 ",
+        isCorrect: true,
+      },
+      { text: "120", isCorrect: false },
+      { text: "122", isCorrect: false },
+    ],
+  },
+
+  // end of edit
   {
     type: "image",
     question: "Which figure completes the pattern?",
@@ -55,7 +184,7 @@ const questions: Question[] = [
   },
   {
     type: "text",
-    question: "5. 4, 6, 9, 6, 14, 6, ?:",
+    question: " 4, 6, 9, 6, 14, 6, ?:",
     options: [
       { text: "14", isCorrect: false },
       { text: "9", isCorrect: false },
@@ -65,7 +194,7 @@ const questions: Question[] = [
   },
   {
     type: "text",
-    question: "29. 831, 842, 853, 864, 875, ?:",
+    question: " 831, 842, 853, 864, 875, ?:",
     options: [
       { text: "880 ", isCorrect: false },
       { text: "886", isCorrect: true },
@@ -73,20 +202,21 @@ const questions: Question[] = [
       { text: "892", isCorrect: false },
     ],
   },
+  // questions 14
   {
     type: "image",
     question: "Which figure completes the pattern?",
-    questionImage: q1,
+    questionImage: q14,
     // change q1 to real suggestions
     options: [
       {
         text: "A",
-        image: "https://i.imgur.com/bMbc0wb.jpeg",
+        image: q14_02,
         isCorrect: false,
       },
-      { text: "B", image: q1, isCorrect: false },
-      { text: "C", image: q1, isCorrect: true },
-      { text: "D", image: q1, isCorrect: false },
+      { text: "B", image: q14_01, isCorrect: false },
+      { text: "C", image: q14_04_r, isCorrect: true },
+      { text: "D", image: q14_03, isCorrect: false },
     ],
   },
   {
@@ -101,21 +231,80 @@ const questions: Question[] = [
     ],
   },
   // Add more questions here...
-  // QUESTION 7
+  // QUESTION 16
   {
     type: "image",
     question: "Choose your answer?",
-    questionImage: "https://i.imgur.com/u84UDVB.png",
-    // change q1 to real suggestions
+    questionImage: q16,
     options: [
       {
         text: "A",
-        image: "https://i.imgur.com/u84UDVB.png",
+        image: q16_2,
         isCorrect: false,
       },
-      { text: "B", image: q1, isCorrect: false },
-      { text: "C", image: q1, isCorrect: true },
-      { text: "D", image: q1, isCorrect: false },
+      { text: "B", image: q16_1, isCorrect: false },
+      { text: "C", image: q16_r, isCorrect: true },
+      { text: "D", image: q16_3, isCorrect: false },
+    ],
+  },
+  // q17
+  {
+    type: "image",
+    question: "Choose your answer?",
+    questionImage: q17,
+    options: [
+      {
+        text: "A",
+        image: q17_2,
+        isCorrect: false,
+      },
+      { text: "B", image: q17_1, isCorrect: false },
+      { text: "C", image: q17_r, isCorrect: true },
+      { text: "D", image: q17_3, isCorrect: false },
+    ],
+  },
+  // 18
+  {
+    type: "text",
+    question: "What number should replace the question mark? 64 : 8 :: 36 :? ",
+    options: [
+      { text: "4", isCorrect: false },
+      {
+        text: "6",
+        isCorrect: true,
+      },
+      { text: "9", isCorrect: false },
+      { text: " 12", isCorrect: false },
+    ],
+  },
+  // 19
+  {
+    type: "text",
+    question:
+      "If you rearrange the letters [ NAIBRIARWE ], you get the name of a ",
+    options: [
+      { text: "Country", isCorrect: false },
+      {
+        text: "Animal ",
+        isCorrect: true,
+      },
+      { text: "Profession", isCorrect: false },
+      { text: " City", isCorrect: false },
+    ],
+  },
+  // 20
+  {
+    type: "text",
+    question:
+      "A clock loses 2 minutes every hour. If it's set correctly at noon, what time will it show at 6 PM the same day?",
+    options: [
+      { text: " 5:48 PM", isCorrect: true },
+      {
+        text: " 5:50 PM  ",
+        isCorrect: false,
+      },
+      { text: "5:52 PM", isCorrect: false },
+      { text: " 5:54 PM ", isCorrect: false },
     ],
   },
 ];
@@ -274,6 +463,9 @@ const Quiz: React.FC = () => {
           </button>
           <button onClick={handleSubmit} className="submit-button">
             Submit <i className="bi bi-check2-square"></i>
+          </button>
+          <button onClick={handleSubmit} className="submit-button">
+            Submit
           </button>
           <button
             onClick={handleNext}

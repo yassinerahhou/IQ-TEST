@@ -3,39 +3,38 @@ import articlesData from "../../articles.json";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-export default function BlogArticle() {
-  const articleId = useParams();
-  const Id = articleId.id;
-  const articleIndex = parseInt(Id, 10);
+interface Article {
+  title: string;
+  para_article: string;
+  image_url: string;
+}
 
-  const [dataArticles, setDataArticles] = useState(articlesData);
+export default function BlogArticle() {
+  const { id } = useParams<{ id?: string }>(); // Ensure id is optional
+  const articleIndex = id ? parseInt(id, 10) : -1; // Fallback to -1 if id is undefined
+
+  const [dataArticles] = useState<Article[]>(articlesData);
 
   return (
     <>
       {dataArticles
-        .filter((post, index) => index === articleIndex)
-        .map((post, index) => {
-          return (
-            <>
-              <div key={index} className={styles.mainArticle}>
-                {/* TITLE  */}
-                <div className={styles.titlePost}>
-                  <h1>{post.title}</h1>
-                </div>
-                {/* IMAGE */}
-
-                <div className={styles.ImagePost}>
-                  <img src={post.image_url} alt={post.image_url} />
-                </div>
-
-                {/*  CONTENT */}
-                <div className={styles.contentPost}>
-                  <p>{post.para_article}</p>
-                </div>
-              </div>
-            </>
-          );
-        })}
+        .filter((_, index) => index === articleIndex)
+        .map((post, index) => (
+          <div key={index} className={styles.mainArticle}>
+            {/* TITLE */}
+            <div className={styles.titlePost}>
+              <h1>{post.title}</h1>
+            </div>
+            {/* IMAGE */}
+            <div className={styles.ImagePost}>
+              <img src={post.image_url} alt={`Article ${index + 1}`} />
+            </div>
+            {/* CONTENT */}
+            <div className={styles.contentPost}>
+              <p>{post.para_article}</p>
+            </div>
+          </div>
+        ))}
     </>
   );
 }

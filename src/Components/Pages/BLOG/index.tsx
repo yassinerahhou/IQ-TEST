@@ -26,7 +26,7 @@ const Blog: React.FC = () => {
           >
             {" "}
             <article key={index} className={styles.cardArticle}>
-              <div className={styles.articleImage}>
+              <div key={index} className={styles.articleImage}>
                 <img
                   className={styles.imgPostClass}
                   src={article.image_url}

@@ -16,7 +16,7 @@ export default function Slider() {
             </div>
             <div className={styles.box_intro_takingtest}>
               <p className={styles.p_random_test}>
-                600 Ppeople are taking the test right now.
+                600 People are taking the test right now.
               </p>
             </div>
             <div className={styles.box_intro_button}>

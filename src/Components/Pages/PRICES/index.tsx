@@ -20,6 +20,10 @@ export default function Prices() {
             <p>Ad-supported experience</p>
             <hr />
           </div>
+          <br />
+          <br />
+          <br />
+          <br />
           <button>SELECT PLAN</button>
         </div>
       </div>
@@ -41,6 +45,8 @@ export default function Prices() {
             <p>Ad-free experience</p>
             <hr />
           </div>
+          <br />
+          <br />
           <button>SELECT PLAN</button>
         </div>
       </div>
