@@ -90,10 +90,10 @@
   object-fit: contain;
   margin-bottom: 10px;
 }
-
 .navigation-buttons {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -119,12 +119,12 @@
 
 .submit-button {
   background-color: #28a745 !important;
+  grid-column: 2 / 3;
 }
 
 .submit-button:hover {
   background-color: #218838 !important;
 }
-
 .qouteList {
   border-bottom: 2px solid royalblue;
   padding: 10px;
