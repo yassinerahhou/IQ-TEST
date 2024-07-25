@@ -39,7 +39,7 @@ const Feedback: React.FC = () => {
   return (
     <div className="parent_feedback">
       <section className="feedback-section-parent">
-        <h1 className="h1_headline">IQ-TEST FEEDBACK</h1>
+        <h1 className="h1_headline"> Brain-iQ FEEDBACK</h1>
         {feedbackItems.map((item, index) => (
           <FeedbackItem key={index} {...item} />
         ))}
