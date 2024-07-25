@@ -1,4 +1,5 @@
-import { useEffect, useState, ChangeEvent, FormEvent } from "react";
+import { useEffect, useState, ChangeEvent, FormEvent, useRef } from "react";
+import emailjs from "emailjs-com";
 import "./style.css";
 
 export default function Contact() {
@@ -12,29 +13,64 @@ export default function Contact() {
     message: "",
   });
 
+  const [statusMessage, setStatusMessage] = useState("");
+  const form = useRef<HTMLFormElement>(null);
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_2bebge7",
+        "template_ntwh59d",
+        form.current!,
+        "EPGAPbb7eX_nO_628"
+      )
+      .then(
+        () => {
+          setStatusMessage("SUCCESS!");
+          console.log("SUCCESS!");
+
+          // Hide status message after 5 seconds
+          setTimeout(() => {
+            setStatusMessage("");
+          }, 5000);
+        },
+        (error) => {
+          setStatusMessage(`FAILED... ${error.text}`);
+          console.log("FAILED...", error.text);
+
+          // Hide status message after 5 seconds
+          setTimeout(() => {
+            setStatusMessage("");
+          }, 5000);
+        }
+      );
+  };
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here (e.g., send data to a server)
     console.log("Form submitted:", formData);
-    // Reset form after submission
     setFormData({ name: "", email: "", message: "" });
+    sendEmail(e);
   };
 
   return (
     <div className="contact-container">
+      {statusMessage && <div className="statusMessage">{statusMessage}</div>}
       <div className="contact-header">
         <h1>Contact Us</h1>
         <p>We'd love to hear from you. Send us a message!</p>
       </div>
       <div className="contact-content">
         <div className="contact-form">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} ref={form}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
