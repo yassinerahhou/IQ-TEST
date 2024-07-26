@@ -1,7 +1,7 @@
 // .SCSS FILE FOR ARTICLE PAGE
 .mainArticle {
   margin: 10px;
-  border: 1px solid black;
+  // border: 1px solid black;
   border-radius: 10px;
   //   height: 200px;
 
@@ -13,23 +13,52 @@
 
 // TITLE POST
 .titlePost {
-  border: 1px solid black;
+  // border: 1px solid black;
   display: flex;
   align-items: center;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 
   h1 {
     color: black;
+    font-weight: 300;
   }
 }
 
 // IMAGE POST
 .ImagePost {
-  border: 1px solid black;
+  // border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 300px;
+    border-radius: 10px;
+  }
 }
 
 // contentPost
 .contentPost {
-  border: 1px solid black;
+  // border: 1px solid black;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contentPost {
+    p {
+      width: 100%;
+    }
+  }
 }

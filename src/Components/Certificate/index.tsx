@@ -5,6 +5,9 @@ import signatureImg from "../../assets/signature_Imgs/image.png";
 import signatureImg2 from "../../assets/signature_Imgs/img_2.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+import img_stamp from "../../assets/stamp_img/stamp.png";
+import dotes_img from "../../assets/stamp_img/dotes.png";
+
 // Define the props interface
 interface CertificateProps {
   username: string;
@@ -15,6 +18,10 @@ const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
   ({ username }, ref) => {
     return (
       <div ref={ref} className={styles.certficateContainer}>
+        {/* DIV DOTES */}
+        <div className={styles.dotesImg}>
+          <img src={dotes_img} alt={dotes_img} />
+        </div>
         <div className={styles.contentCertficate}>
           <div className={styles.box_logo}>
             <img src={logoCertificate} alt="Logo" />
@@ -65,6 +72,10 @@ const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
                 <p>Owner Brain IQ, Software Engineer</p>
               </div>
             </div>
+            <div className={styles.stampImg}>
+              <img src={img_stamp} alt={img_stamp} />
+            </div>
+            {/* STAMP PLACE */}
           </div>
           <div className={styles.dateCertificate}>
             <div className={styles.dateBox1}>

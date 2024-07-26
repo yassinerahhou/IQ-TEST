@@ -459,11 +459,9 @@ const Quiz: React.FC = () => {
             onClick={handlePrevious}
             disabled={currentQuestionIndex === 0}
           >
-            <i className={`iconArrowLeft bi bi-arrow-left`}></i>Previous
+            Previous
           </button>
-          <button onClick={handleSubmit} className="submit-button">
-            Submit <i className="bi bi-check2-square"></i>
-          </button>
+
           <button onClick={handleSubmit} className="submit-button">
             Submit
           </button>
@@ -471,7 +469,7 @@ const Quiz: React.FC = () => {
             onClick={handleNext}
             disabled={currentQuestionIndex === questions.length - 1}
           >
-            Next <i className={`iconArrowRight bi bi-arrow-right`}></i>
+            Next
           </button>
         </div>
       </div>

@@ -7,6 +7,7 @@ interface Article {
   title: string;
   para_article: string;
   image_url: string;
+  last_update: string;
 }
 
 export default function BlogArticle() {
@@ -24,6 +25,7 @@ export default function BlogArticle() {
             {/* TITLE */}
             <div className={styles.titlePost}>
               <h1>{post.title}</h1>
+              <p>Last Update : {post.last_update}</p>
             </div>
             {/* IMAGE */}
             <div className={styles.ImagePost}>

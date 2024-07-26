@@ -1,11 +1,22 @@
 // .SCSS FILE FOR CERFICATE
 .certficateContainer {
-  width: 70%;
+  // width: 70%;
   margin: auto;
   border: 10px solid rgb(205, 193, 193);
   background-color: #6fa3c1;
   // padding: 10px;
   // margin: 10px;
+  position: relative;
+}
+
+.dotesImg {
+  position: absolute;
+  padding: 10px;
+  margin: 5px;
+  img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .contentCertficate {
@@ -79,9 +90,20 @@
   // border: 1px solid black;
 
   display: grid;
-  grid-template-columns: 20% 20%;
+  grid-template-columns: 20% 20% auto;
   padding: 10px;
   gap: 10px;
+}
+
+.stampImg {
+  // border: 1px solid black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .zakariaSignature {
@@ -95,7 +117,7 @@
 
 .signatureImg {
   // border: 1px solid black;
-  height: 30px;
+  height: 25px;
 
   .sighnClass {
     width: 100%;
@@ -112,14 +134,14 @@
   // border: 1px solid black;
 
   p {
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 
 .ownersname {
   font-weight: 700;
   padding: 5px;
-  font-size: 11px;
+  font-size: 8px;
 }
 
 .yassinSignature {
@@ -142,7 +164,7 @@
 
 .dateBox1 {
   // border: 1px solid black;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
   font-size: 14px;
   padding: 5px;
 }
