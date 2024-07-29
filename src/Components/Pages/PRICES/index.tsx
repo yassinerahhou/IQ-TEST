@@ -2,6 +2,10 @@
 import "./Pricing.css";
 
 export default function Prices() {
+  const handleSelectPlan = () => {
+    alert("All packages are free for now");
+  };
+
   return (
     <div className="pricing-container">
       <div className="pricing-card card-starter">
@@ -24,7 +28,9 @@ export default function Prices() {
           <br />
           <br />
           <br />
-          <button>SELECT PLAN</button>
+          <button id="select_plan" onClick={handleSelectPlan}>
+            SELECT PLAN
+          </button>
         </div>
       </div>
       <div className="pricing-card card-advanced">
@@ -47,7 +53,9 @@ export default function Prices() {
           </div>
           <br />
           <br />
-          <button>SELECT PLAN</button>
+          <button id="select_plan" onClick={handleSelectPlan}>
+            SELECT PLAN
+          </button>
         </div>
       </div>
       <div className="pricing-card card-premium">
@@ -68,7 +76,9 @@ export default function Prices() {
             <p>Historical test results and progress tracking</p>
             <hr />
           </div>
-          <button>SELECT PLAN</button>
+          <button id="select_plan" onClick={handleSelectPlan}>
+            SELECT PLAN
+          </button>
         </div>
       </div>
     </div>
