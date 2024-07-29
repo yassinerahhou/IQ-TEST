@@ -28,7 +28,7 @@ const Feedback: React.FC = () => {
     },
     {
       pictureClass: "pic-2",
-      text: "Taking the IQ test on your website was a positive experience for me. The layout was intuitive, making it simple to navigate through the questions. The instructions were straightforward, and I appreciated the mix of difficulty levels in the questions. The personalized feedback at the end was insightful, giving me a better understanding of my cognitive strengths and areas where I can improve. Overall, it was a well-designed test that I would be happy to recommend to friends.",
+      text: "Taking the Brainbooster on your website was a positive experience for me. The layout was intuitive, making it simple to navigate through the questions. The instructions were straightforward, and I appreciated the mix of difficulty levels in the questions. The personalized feedback at the end was insightful, giving me a better understanding of my cognitive strengths and areas where I can improve. Overall, it was a well-designed test that I would be happy to recommend to friends.",
     },
     {
       pictureClass: "pic-3",

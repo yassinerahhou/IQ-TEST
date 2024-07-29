@@ -16,9 +16,9 @@ export default function Privacy() {
         <section>
           <h2>1. Introduction</h2>
           <p>
-            Welcome to the IQ Test website. We are committed to protecting your
-            personal information and your right to privacy. This Privacy Policy
-            explains how we collect, use, disclose, and safeguard your
+            Welcome to the Brainbooster website. We are committed to protecting
+            your personal information and your right to privacy. This Privacy
+            Policy explains how we collect, use, disclose, and safeguard your
             information when you visit our website or use our services.
           </p>
         </section>
