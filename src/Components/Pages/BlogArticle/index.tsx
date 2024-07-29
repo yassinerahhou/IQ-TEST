@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 interface Article {
   title: string;
-  para_article: string;
+  para_article: string; // Ensure this is a string containing HTML
   image_url: string;
   last_update: string;
 }
@@ -25,7 +25,7 @@ export default function BlogArticle() {
             {/* TITLE */}
             <div className={styles.titlePost}>
               <h1>{post.title}</h1>
-              <p>Last Update : {post.last_update}</p>
+              <p>Last Update: {post.last_update}</p>
             </div>
             {/* IMAGE */}
             <div className={styles.ImagePost}>
@@ -33,7 +33,7 @@ export default function BlogArticle() {
             </div>
             {/* CONTENT */}
             <div className={styles.contentPost}>
-              <p>{post.para_article}</p>
+              <div dangerouslySetInnerHTML={{ __html: post.para_article }} />
             </div>
           </div>
         ))}

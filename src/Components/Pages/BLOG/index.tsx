@@ -34,8 +34,16 @@ const Blog: React.FC = () => {
                 />
               </div>
               <div className={styles.articleContent}>
-                <h2 className={styles.titleArticle}>{article.title}</h2>
-                <p className={styles.articleExcerpt}>{article.para_article}</p>
+                {/* dangerouslySetInnerHTML={{ __html: post.para_article }} */}
+                <p
+                  className={styles.articleExcerpt}
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      article.para_article.slice(0, 200) +
+                      (article.para_article.length > 200 ? "..." : ""),
+                  }}
+                />
+
                 <button className={styles.readMoreBtn}>Read More</button>
               </div>
             </article>

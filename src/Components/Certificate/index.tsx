@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 import styles from "./certificate.module.scss";
 import logoCertificate from "../../assets/logi1.png";
-import signatureImg from "../../assets/signature_Imgs/image.png";
-import signatureImg2 from "../../assets/signature_Imgs/img_2.svg";
+// import signatureImg from "../../assets/signature_Imgs/image.png";
+// import signatureImg2 from "../../assets/signature_Imgs/img_2.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import img_stamp from "../../assets/stamp_img/stamp.png";

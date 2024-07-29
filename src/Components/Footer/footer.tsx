@@ -17,16 +17,32 @@ export default function Footer() {
           {/* <h1>IQ TEST</h1> */}
           <img src={logo} alt="" />
           <div id="social-media">
-            <a href="#" className="iconSocial">
+            <a
+              href="https://www.facebook.com/profile.php?id=61563314438494&is_tour_completed"
+              target="_blank"
+              className="iconSocial"
+            >
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a href="#" className="iconSocial">
+            <a
+              href="https://www.facebook.com/profile.php?id=61563314438494&is_tour_completed"
+              target="_blank"
+              className="iconSocial"
+            >
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="#" className="iconSocial">
+            <a
+              href="https://www.facebook.com/profile.php?id=61563314438494&is_tour_completed"
+              target="_blank"
+              className="iconSocial"
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="#" className="iconSocial">
+            <a
+              href="https://www.facebook.com/profile.php?id=61563314438494&is_tour_completed"
+              target="_blank"
+              className="iconSocial"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </div>
