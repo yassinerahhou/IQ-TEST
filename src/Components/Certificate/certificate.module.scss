@@ -93,6 +93,10 @@
   grid-template-columns: 20% 20% auto;
   padding: 10px;
   gap: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .stampImg {

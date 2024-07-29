@@ -42,7 +42,7 @@ const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
             </p>
           </div>
           <div className={styles.SignatureBox}>
-            <div className={styles.zakariaSignature}>
+            {/* <div className={styles.zakariaSignature}>
               <div className={styles.signatureImg}>
                 <img
                   className={styles.sighnClass}
@@ -56,8 +56,8 @@ const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
               <div className={styles.role}>
                 <p>Owner Brain IQ, Software Engineer</p>
               </div>
-            </div>
-            <div className={styles.yassinSignature}>
+            </div> */}
+            {/* <div className={styles.yassinSignature}>
               <div className={styles.signatureImg}>
                 <img
                   className={styles.sighnClass}
@@ -71,7 +71,7 @@ const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
               <div className={styles.role}>
                 <p>Owner Brain IQ, Software Engineer</p>
               </div>
-            </div>
+            </div> */}
             <div className={styles.stampImg}>
               <img src={img_stamp} alt={img_stamp} />
             </div>
