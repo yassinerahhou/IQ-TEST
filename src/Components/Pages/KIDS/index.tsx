@@ -171,9 +171,9 @@ export default function KIDS() {
           </div>
           <div className="descriptionKidsCard">
             <p>
-              Welcome to the Brain QI Kids Challenge! Test your knowledge and
-              have fun with our exciting quiz. Answer quickly and see how many
-              questions you can get right!
+              Welcome to the Brainbooster Kids Challenge! Test your knowledge
+              and have fun with our exciting quiz. Answer quickly and see how
+              many questions you can get right!
             </p>
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function KIDS() {
               Try Again
             </button>
             <Link to="/" className="home-link">
-              Back to Brain QI Home
+              Back to Brainbooster Home
             </Link>
           </div>
         )}

@@ -27,6 +27,7 @@ import Privacy from "../Pages/privacy-policy";
 import Terms from "../Pages/Terms-of-use";
 import Certificate from "../Certificate";
 import BlogArticle from "../Pages/BlogArticle";
+import Ads_tsx from "../ads-txt/ads";
 export default function Layout() {
   return (
     <>
@@ -55,6 +56,8 @@ export default function Layout() {
           <Route path="/terms-of-use" element={<Terms />} />
           <Route path="/Certificate" element={<Certificate username={""} />} />
           <Route path="/BlogArticle/:id/:title" element={<BlogArticle />} />
+
+          <Route path="/ads.txt" element={<Ads_tsx />} />
         </Routes>
 
         <Footer />

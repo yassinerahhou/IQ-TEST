@@ -4,9 +4,9 @@ import "./footer-style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
-  faTwitter,
+  // faTwitter,
   faInstagram,
-  faLinkedinIn,
+  // faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import logo from "./../../assets/logo2.png";
 export default function Footer() {
@@ -24,27 +24,27 @@ export default function Footer() {
             >
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a
+            {/* <a
               href="https://www.facebook.com/profile.php?id=61563314438494&is_tour_completed"
               target="_blank"
               className="iconSocial"
             >
               <FontAwesomeIcon icon={faTwitter} />
-            </a>
+            </a>  */}
             <a
-              href="https://www.facebook.com/profile.php?id=61563314438494&is_tour_completed"
+              href="https://www.instagram.com/officialiqtest/"
               target="_blank"
               className="iconSocial"
             >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61563314438494&is_tour_completed"
+            {/* <a
+              href="https://www.linkedin.com/company/iqcertificate/posts/?feedView=all"
               target="_blank"
               className="iconSocial"
             >
               <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="quick_links">
