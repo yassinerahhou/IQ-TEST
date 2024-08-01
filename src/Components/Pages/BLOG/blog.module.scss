@@ -1,44 +1,58 @@
 .blogContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .blogTitle {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #34495e;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .articles {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.articleLink {
+  text-decoration: none;
+  color: inherit;
 }
 
 .cardArticle {
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   }
 }
 
 .articleImage {
-  height: 100%;
+  height: 200px;
+  overflow: hidden;
 
   .imgPostClass {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px 0 0 20px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .imgPostClass {
+    transform: scale(1.05);
   }
 }
 
@@ -47,12 +61,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
 }
 
 .titleArticle {
   font-size: 1.8rem;
   color: #2c3e50;
   margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .articleExcerpt {
@@ -64,44 +81,49 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  line-height: 1.5em;
+  line-height: 1.6;
   // max-height: 6em;
-
   /* Standard property for other browsers */
   line-clamp: 4;
 }
+
 .readMoreBtn {
   align-self: flex-start;
   background-color: #3498db;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 
   &:hover {
     background-color: #2980b9;
+    transform: translateY(-2px);
   }
 }
 
 @media (max-width: 768px) {
-  .cardArticle {
+  .blogTitle {
+    font-size: 2.5rem;
+  }
+
+  .articles {
     grid-template-columns: 1fr;
   }
 
   .articleImage {
-    .imgPostClass {
-      border-radius: 20px 20px 0 0;
-    }
+    height: 250px;
   }
 
   .articleContent {
-    padding: 20px;
+    padding: 25px;
   }
 
   .titleArticle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -111,7 +133,12 @@
   }
 
   .titleArticle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+
+  .readMoreBtn {
+    width: 100%;
+    text-align: center;
   }
 }
 

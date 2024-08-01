@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./blog.module.scss";
 import articles_data from "../../articles.json";
-import { Link } from "react-router-dom";
-// import img_article_1 from "../../../assets/Articles_images/ost_1.png";
 
 interface Article {
   title: string;
@@ -11,39 +10,45 @@ interface Article {
 }
 
 const Blog: React.FC = () => {
+  const [articles, setArticles] = useState<Article[]>([]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    setArticles(articles_data);
   }, []);
+
+  const truncateText = (text: string, maxLength: number) => {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength).trim() + "...";
+  };
 
   return (
     <div className={styles.blogContainer}>
       <h1 className={styles.blogTitle}>Latest Articles</h1>
-
       <div className={styles.articles}>
-        {articles_data.map((article: Article, index: number) => (
+        {articles.map((article: Article, index: number) => (
           <Link
             to={`/BlogArticle/${index}/${encodeURIComponent(article.title)}`}
+            key={index}
+            className={styles.articleLink}
           >
-            {" "}
-            <article key={index} className={styles.cardArticle}>
-              <div key={index} className={styles.articleImage}>
+            <article className={styles.cardArticle}>
+              <div className={styles.articleImage}>
                 <img
                   className={styles.imgPostClass}
                   src={article.image_url}
                   alt={`Article ${index + 1}`}
+                  loading="lazy"
                 />
               </div>
               <div className={styles.articleContent}>
-                {/* dangerouslySetInnerHTML={{ __html: post.para_article }} */}
+                <h2 className={styles.titleArticle}>{article.title}</h2>
                 <p
                   className={styles.articleExcerpt}
                   dangerouslySetInnerHTML={{
-                    __html:
-                      article.para_article.slice(0, 200) +
-                      (article.para_article.length > 200 ? "..." : ""),
+                    __html: truncateText(article.para_article, 200),
                   }}
                 />
-
                 <button className={styles.readMoreBtn}>Read More</button>
               </div>
             </article>
