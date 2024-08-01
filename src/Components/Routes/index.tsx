@@ -27,6 +27,7 @@ import Privacy from "../Pages/privacy-policy";
 import Terms from "../Pages/Terms-of-use";
 import Certificate from "../Certificate";
 import BlogArticle from "../Pages/BlogArticle";
+import Disclaimer from "../Pages/Disclamer";
 export default function Layout() {
   return (
     <>
@@ -55,6 +56,7 @@ export default function Layout() {
           <Route path="/terms-of-use" element={<Terms />} />
           <Route path="/Certificate" element={<Certificate username={""} />} />
           <Route path="/BlogArticle/:id/:title" element={<BlogArticle />} />
+          <Route path="/Disclaimer" element={<Disclaimer />} />
         </Routes>
 
         <Footer />

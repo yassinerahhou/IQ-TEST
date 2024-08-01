@@ -93,6 +93,11 @@ export default function Footer() {
                 ABOUT US
               </Link>
             </li>
+            <li>
+              <Link to="/Disclaimer" className="a_remove_style">
+                Disclaimer
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

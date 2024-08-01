@@ -1,0 +1,90 @@
+.disclaimer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.disclaimer-content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.disclaimer-content h1 {
+  color: #3e5d7c;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.disclaimer-scroll {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.disclaimer-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.disclaimer-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.disclaimer-scroll::-webkit-scrollbar-thumb {
+  background: #6fa3c1;
+  border-radius: 4px;
+}
+
+.disclaimer-scroll::-webkit-scrollbar-thumb:hover {
+  background: #3e5d7c;
+}
+
+.disclaimer-section {
+  margin-bottom: 1.5rem;
+}
+
+.disclaimer-section p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.accept-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #6fa3c1;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accept-button:hover {
+  background-color: #3e5d7c;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-container {
+    padding: 1rem;
+  }
+
+  .disclaimer-content {
+    padding: 1.5rem;
+  }
+
+  .disclaimer-scroll {
+    max-height: 50vh;
+  }
+}
