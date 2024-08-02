@@ -48,7 +48,7 @@ h2::after {
   bottom: 0;
   width: 50px;
   height: 3px;
-  background-color: #3498db;
+  /* background-color: #3498db; */
 }
 
 p {
