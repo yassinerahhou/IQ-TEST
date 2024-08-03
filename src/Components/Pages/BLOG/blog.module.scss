@@ -64,6 +64,26 @@
   flex-grow: 1;
 }
 
+.eyeAndTitle {
+  // border: 1px solid red;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.visitCount {
+  // border: 1px solid red;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  i {
+    color: red;
+  }
+}
+
 .titleArticle {
   font-size: 1.8rem;
   color: #2c3e50;

@@ -52,15 +52,15 @@
 }
 
 .picture-area.pic-1 {
-  background-image: url("/src/Components/feedback-section/feedback-pictures/image-1x.jpg");
+  background-image: url("/src/Components/feedback-section/feedback-pictures/img_user_1.png");
 }
 
 .picture-area.pic-2 {
-  background-image: url("/src/Components/feedback-section/feedback-pictures/image_3.png");
+  background-image: url("/src/Components/feedback-section/feedback-pictures/img_user_2.png");
 }
 
 .picture-area.pic-3 {
-  background-image: url("/src/Components/feedback-section/feedback-pictures/image-2x.webp");
+  background-image: url("/src/Components/feedback-section/feedback-pictures/img_user_3.png");
 }
 
 .text-area {

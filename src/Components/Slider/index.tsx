@@ -16,13 +16,16 @@ export default function Slider() {
             </div>
             <div className={styles.box_intro_takingtest}>
               <p className={styles.p_random_test}>
-                600 People are taking the test right now.
+                546 People are taking the test right now.
               </p>
             </div>
             <div className={styles.box_intro_button}>
               <Link to="/Start">
-                <button className={`${styles.btn_start} btn btn-light`}>
-                  Start certiificate test{" "}
+                <button
+                  style={{ border: "1px solid grey" }}
+                  className={`${styles.btn_start} btn btn-light`}
+                >
+                  Start Certificate Test{" "}
                 </button>
               </Link>
             </div>

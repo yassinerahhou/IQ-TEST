@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./navbar.module.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import logo from "./../../assets/logi1.png";
+import logo from "./../../assets/logo_3.png";
 
 export default function Navbar() {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
