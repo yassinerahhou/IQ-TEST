@@ -103,7 +103,7 @@ export default function Footer() {
       </div>
       <div className="copyright_section">
         <p id="copyright">
-          &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+          &copy; {new Date().getFullYear()}Brain Booster. All rights reserved.
         </p>
         <p id="copyright">
           Made with love by
