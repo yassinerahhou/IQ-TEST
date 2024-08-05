@@ -66,14 +66,14 @@ li {
   position: relative;
 }
 
-li::before {
+/* li::before {
   content: "•";
   color: #3498db;
   font-weight: bold;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
-}
+} */
 
 .developer-info {
   display: flex;

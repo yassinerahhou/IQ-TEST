@@ -1,12 +1,12 @@
 import { forwardRef } from "react";
 import styles from "./certificate.module.scss";
-import logoCertificate from "../../assets/logi1.png";
+import logoCertificate from "../../assets/logo_3.png";
 // import signatureImg from "../../assets/signature_Imgs/image.png";
 // import signatureImg2 from "../../assets/signature_Imgs/img_2.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import img_stamp from "../../assets/stamp_img/stamp.png";
-import dotes_img from "../../assets/stamp_img/dotes.png";
+// import dotes_img from "../../assets/stamp_img/dotes.png";
 
 // Define the props interface
 interface CertificateProps {
@@ -19,9 +19,9 @@ const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
     return (
       <div ref={ref} className={styles.certficateContainer}>
         {/* DIV DOTES */}
-        <div className={styles.dotesImg}>
+        {/* <div className={styles.dotesImg}>
           <img src={dotes_img} alt={dotes_img} />
-        </div>
+        </div> */}
         <div className={styles.contentCertficate}>
           <div className={styles.box_logo}>
             <img src={logoCertificate} alt="Logo" />
@@ -86,7 +86,7 @@ const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
             </div>
             <div className={styles.dateBox2}>
               <p>
-                POWERED BY: <span className={styles.appName}>BRAIN IQ</span>
+                POWERED BY: <span className={styles.appName}>Brainbooster</span>
               </p>
             </div>
           </div>
