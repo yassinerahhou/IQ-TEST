@@ -82,9 +82,6 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   line-height: 1.6;
-  // max-height: 6em;
-  /* Standard property for other browsers */
-  line-clamp: 4;
 }
 
 .readMoreBtn {
@@ -142,14 +139,10 @@
   }
 }
 
-// .articleExcerpt {
-//   border: 1px solid red;
-//     display: -webkit-box;
-//     -webkit-line-clamp: 3;
-//     -moz-line-clamp: 3;
-//     line-clamp: 3;
-//     -webkit-box-orient: vertical;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     max-height: calc(3 * 1.2em);
-// }
+.footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  /* You can add more styling here */
+}
