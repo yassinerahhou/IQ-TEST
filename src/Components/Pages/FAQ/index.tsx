@@ -25,7 +25,7 @@ const faqData = [
   {
     question: "How do I contact customer support?",
     answer:
-      "You can reach our customer support team via email at support@brainiq.com or through our contact page on the website.",
+      "You can reach our customer support team via email at support@brainbooster.com or through our contact page on the website.",
   },
 ];
 
