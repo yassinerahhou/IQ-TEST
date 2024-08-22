@@ -11,7 +11,7 @@ import {
 import logo from "./../../assets/logo2.png";
 export default function Footer() {
   return (
-    <footer>
+    <footer className="footer-component">
       <div className="parrent-div">
         <div className="logo">
           {/* <h1>IQ TEST</h1> */}

@@ -27,8 +27,9 @@ export default function BlogArticle() {
               <h1>{post.title}</h1>
               {/* <p>{post.last_update}</p> */}
             </div>
-            {/* IMAGE */}
+            {/* IMAGE */}{" "}
             <div className={styles.ImagePost}>
+              {" "}
               <img src={post.image_url} alt={`Article ${index + 1}`} />
             </div>
             {/* CONTENT */}

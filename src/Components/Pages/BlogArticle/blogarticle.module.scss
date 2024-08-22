@@ -30,16 +30,18 @@
 
 // IMAGE POST
 .ImagePost {
-  // border: 1px solid black;
   padding: 10px;
   display: flex;
-  align-items: center;
-  // justify-content: center;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center text inside the container (if any) */
+}
 
-  img {
-    height: 300px;
-    border-radius: 10px;
-  }
+.ImagePost img {
+  height: 300px;
+  border-radius: 10px;
+  /* Optionally add max-width to ensure image doesn't exceed container */
+  max-width: 100%;
 }
 
 // contentPost

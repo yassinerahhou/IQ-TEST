@@ -22,12 +22,12 @@ export default function IQTestInfo() {
             </div>
             <div className={styles.text_diagram}>
               <p className={styles.para_diagram}>
-                At IQ-Test, we believe that self-awareness is the cornerstone of
-                personal growth. By delving into the intricacies of your
-                cognitive abilities, you gain not only a better understanding of
-                yourself but also invaluable insights into how you interact with
-                the world around you. Imagine being able to pinpoint your
-                natural aptitudes with precision.
+                At Brainbooster, we believe that self-awareness is the
+                cornerstone of personal growth. By delving into the intricacies
+                of your cognitive abilities, you gain not only a better
+                understanding of yourself but also invaluable insights into how
+                you interact with the world around you. Imagine being able to
+                pinpoint your natural aptitudes with precision.
               </p>
             </div>
           </div>

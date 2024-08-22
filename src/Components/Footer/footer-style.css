@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
-
-footer {
+.footer-component {
   background-color: #1a1a1a;
   color: #fff;
   padding: 50px 0 20px;
   font-family: "Poppins", sans-serif;
 }
 
-.parrent-div {
+.footer-component .parrent-div {
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
@@ -15,18 +13,18 @@ footer {
   padding: 0 20px;
 }
 
-.logo h1 {
+.footer-component .logo h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-#social-media {
+.footer-component #social-media {
   display: flex;
   gap: 15px;
   margin-top: 20px;
 }
 
-.iconSocial {
+.footer-component .iconSocial {
   background-color: #333;
   color: #fff;
   width: 40px;
@@ -38,25 +36,24 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-.iconSocial:hover {
+.footer-component .iconSocial:hover {
   background-color: #6fa3c1;
 }
 
-.quick_links,
-.LEGAL-PAGES {
+.footer-component .quick_links,
+.footer-component .LEGAL-PAGES {
   flex: 1;
   max-width: 250px;
 }
 
-h3 {
+.footer-component h3 {
   font-weight: 600;
   font-size: 1.2rem;
   margin-bottom: 20px;
   position: relative;
-  font-family: "Poppins", sans-serif;
 }
 
-h3::after {
+.footer-component h3::after {
   content: "";
   position: absolute;
   left: 0;
@@ -66,57 +63,57 @@ h3::after {
   background-color: #6fa3c1;
 }
 
-ul {
+.footer-component ul {
   list-style-type: none;
   padding: 0;
 }
 
-li {
+.footer-component li {
   margin-bottom: 15px;
 }
 
-.a_remove_style {
+.footer-component .a_remove_style {
   color: #bbb;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.a_remove_style:hover {
+.footer-component .a_remove_style:hover {
   color: #fff;
 }
 
-.copyright_section {
+.footer-component .copyright_section {
   margin-top: 50px;
   text-align: center;
   border-top: 1px solid #333;
   padding-top: 20px;
 }
 
-#copyright {
+.footer-component #copyright {
   font-size: 0.9rem;
   color: #bbb;
 }
 
 @media (max-width: 768px) {
-  .parrent-div {
+  .footer-component .parrent-div {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .quick_links,
-  .LEGAL-PAGES {
+  .footer-component .quick_links,
+  .footer-component .LEGAL-PAGES {
     margin-top: 30px;
   }
 
-  h3::after {
+  .footer-component h3::after {
     left: 50%;
     transform: translateX(-50%);
   }
 }
 
-h1,
-a {
+.footer-component h1,
+.footer-component a {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
