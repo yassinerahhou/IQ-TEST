@@ -167,7 +167,7 @@ export default function KIDS() {
       <div className="quiz-content">
         <div className="kidsCard">
           <div className="headlineCard">
-            <h1>Brain QI: Kids Challenge</h1>
+            <h1>Brain IQ: Kids Challenge</h1>
           </div>
           <div className="descriptionKidsCard">
             <p>
@@ -201,7 +201,7 @@ export default function KIDS() {
           </div>
         ) : (
           <div className="results-section fadeIn">
-            <h2 className="results-title">Your Brain QI Score</h2>
+            <h2 className="results-title">Your Brain IQ Score</h2>
             <p className="results-score">
               You got <span className="score-highlight">{getScore()}</span> out
               of {questions.length} correct!
@@ -211,7 +211,7 @@ export default function KIDS() {
                 ? "Wow! You're a genius! 🎉"
                 : getScore() > questions.length / 2
                 ? "Great job! You're super smart! 🌟"
-                : "Good effort! Keep practicing to improve your Brain QI! 💪"}
+                : "Good effort! Keep practicing to improve your Brain IQ! 💪"}
             </p>
             <button onClick={restartQuiz} className="restart-btn">
               Try Again
