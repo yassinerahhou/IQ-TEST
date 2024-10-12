@@ -25,7 +25,8 @@ export default function Navbar() {
 
   const navItems = [
     { path: "/Start", label: "Start", icon: "fa-play" },
-    { path: "/Prices", label: "PRICES", icon: "fa-money" },
+    // comment proce page temporary
+    // { path: "/Prices", label: "PRICES", icon: "fa-money" },
     { path: "/Blog", label: "BLOG", icon: "fa-language" },
     { path: "/Faq", label: "FAQ", icon: "fa-comment" },
     { path: "/KIDS", label: "KIDS", icon: "fa-child" },
