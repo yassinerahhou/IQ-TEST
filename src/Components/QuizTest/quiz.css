@@ -148,6 +148,16 @@
   }
 
   .option-button {
-    width: 100%;
+    width: 90%;
+  }
+  .navigation-buttons button {
+    width: 90%;
+    margin: auto;
+  }
+  .navigation-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
